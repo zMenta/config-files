@@ -6,5 +6,7 @@
 *** .bashrc
 
 export PATH="$HOME/.emacs.d/bin:$PATH"
+
 export PATH="$HOME/godot:$PATH"
+
 export emacs="emacsclient -c -a ''"
