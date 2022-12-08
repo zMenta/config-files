@@ -8,7 +8,8 @@
 #+BEGIN_SRC bash
 export PATH="$HOME/.emacs.d/bin:$PATH"
 
-#Godot path in Home/godot/godot(executable). So you can use in the term 'godot' and godot will open. Useful for DoomEmacs gdscript configuration
+# Godot path in Home/godot/godot(executable). So you can use in the command 'godot' and godot will open.
+# Useful for DoomEmacs gdscript configuration
 export PATH="$HOME/godot:$PATH"
 export emacs="emacsclient -c -a ''"
 #+END_SRC
