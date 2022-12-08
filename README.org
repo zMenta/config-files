@@ -1,2 +1,10 @@
 * This is a configuration repository
    Each folder or file represents a set of configs that I use.
+
+
+** Config texts
+*** .bashrc
+
+export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/godot:$PATH"
+export emacs="emacsclient -c -a ''"
