@@ -33,3 +33,7 @@ sudo find / -iname emacs.desktop
 #+BEGIN_SRC bash
 sudo cp /usr/share/applications/emacs.desktop /usr/share/applications/emacsclient.desktop
 #+END_SRC
+
+
+
+sudo vim /usr/share/applications/emacsclient.desktop
