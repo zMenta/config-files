@@ -1,0 +1,14 @@
+
+* Creating an emacsclient desktop shortcut
+
+- You can find the emacs desktop file path using this command:
+#+BEGIN_SRC bash
+sudo find / -iname emacs.desktop
+#+END_SRC
+
+- Use the command cp to copy the path and create another .desktop file of emacs as emacsclient
+#+BEGIN_SRC bash
+sudo cp /usr/share/applications/emacs.desktop /usr/share/applications/emacsclient.desktop
+#+END_SRC
+
+- Final step is to modify the file name and exec to emacsclient like in the .desktop file example.
