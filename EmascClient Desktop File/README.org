@@ -11,4 +11,12 @@ sudo find / -iname emacs.desktop
 sudo cp /usr/share/applications/emacs.desktop /usr/share/applications/emacsclient.desktop
 #+END_SRC
 
-- Final step is to modify the file name and exec to emacsclient like in the .desktop file example.
+- Final step is to modify the file name and exec properties.
+#+BEGIN_SRC bash
+Name=EmacsClient (GUI)
+#+END_SRC
+
+
+#+BEGIN_SRC bash
+Exec=/usr/bin/emacsclient -c -a '' %F
+#+END_SRC
