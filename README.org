@@ -16,7 +16,7 @@ alias emacs="emacsclient -c -a ''"
 
 
 *** Godot External Editor as DoomEmacs
-Caviat: Emacs client need to be open beforehand to work.
+- Caviat: Emacs client need to be open beforehand to work.
 #+BEGIN_EXAMPLE
  exec path: emacsclient
  exec flags: -a "" +{line}:{col} {file}
