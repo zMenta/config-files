@@ -47,6 +47,7 @@
 
 (require 'gdscript-mode)
 (require 'rustic)
+(require 'beacon)
 (beacon-mode 1)
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
