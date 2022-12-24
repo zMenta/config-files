@@ -20,12 +20,20 @@
 (setq org-directory "~/org/")
 
 
-;; Packages require's
+;; Packages
 (require 'gdscript-mode)
 (require 'rustic)
-(require 'beacon)
 
-;; Packages configurations
-(beacon-mode 1)
+;; Beacon
+(use-package! beacon
+  :config
+        (beacon-mode 1)
+  )
 
-
+;; Org-Superstar
+(use-package! org-superstar
+  :config
+        (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+        (setq org-superstar-headline-bullets-list
+              '("◉" "◎" "○" ))
+  )
