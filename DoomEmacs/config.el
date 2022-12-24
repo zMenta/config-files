@@ -34,6 +34,8 @@
 (use-package! org-superstar
   :config
         (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
+        (setq org-superstar-special-todo-items t) ;; Makes a TODO header bullets into check boxes
         (setq org-superstar-headline-bullets-list
               '("◉" "◎" "○" ))
   )
+
