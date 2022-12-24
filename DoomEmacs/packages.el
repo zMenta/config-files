@@ -8,4 +8,4 @@
 (package! gdscript-mode)
 (package! rustic)
 (package! beacon)
-
+(package! org-superstar)
