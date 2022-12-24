@@ -27,6 +27,7 @@
       '(("+" . "*") ("*" . "-") ("-" . "+")))
 
 ;; Set faces (font height) for each header bullet levels
+(after! org
   (dolist (face '((org-level-1 . 1.2)
                   (org-level-2 . 1.1)
                   (org-level-3 . 1.05)
@@ -36,6 +37,7 @@
                   (org-level-7 . 1.0)
                   (org-level-8 . 1.0)))
     (set-face-attribute (car face) nil :height (cdr face)))
+  )
 
 
 ;; Packages
@@ -56,6 +58,7 @@
         (setq org-superstar-special-todo-items t) ;; Makes a TODO header bullets into check boxes
         (setq org-superstar-headline-bullets-list
               '("◉" "◎" "○" ))
+
   )
 
 ;; Org-Appear
