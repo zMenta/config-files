@@ -58,3 +58,8 @@
         (setq org-appear-autolinks t) ;; Enable on links
         (setq org-appear-autosubmarkers t) ;; Enable on subscript and superscript
   )
+
+;; Ox-Reveal
+(use-package! ox-reveal
+  :defer 5
+  )
