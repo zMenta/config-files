@@ -15,3 +15,4 @@
 ;; Org Packages
 (package! org-superstar)
 (package! org-appear)
+(package! ox-reveal) ;; Org files to revel slide presentations
