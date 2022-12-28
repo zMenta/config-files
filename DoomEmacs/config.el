@@ -19,8 +19,11 @@
 ;; Org Configuration
 (setq org-directory "~/org/")
 
-;; (setq org-ellipsis " ⬎")
-(setq org-ellipsis " ▼")
+(setq org-ellipsis " ⬎")
+;; (setq org-ellipsis " ▼")
+;; Sets the org ellipsis symbol to have the same color as the text.
+(custom-set-faces!
+  '(org-ellipsis :foreground nil))
 
 ;; Automatically change bullet type when indenting. Ex: indenting a + makes the bullet a *.
 (setq org-list-demote-modify-bullet
