@@ -15,4 +15,5 @@
 ;; Org Packages
 (package! org-superstar)
 (package! org-appear)
-(package! ox-reveal) ;; Org files to revel slide presentations
+(package! ox-reveal) ;; Org files to reveal.js slide presentations
+
