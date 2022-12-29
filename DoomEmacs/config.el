@@ -78,5 +78,6 @@
 
 ;; Ox-Reveal
 (use-package! ox-reveal
-  :defer 5
+  :config
+        (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js")
   )
