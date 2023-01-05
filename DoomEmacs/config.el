@@ -44,8 +44,15 @@
 
 
 ;; Packages
-(require 'gdscript-mode)
+;; (require 'gdscript-mode)
 (require 'rustic)
+
+
+;; Lsp
+;;
+;; Godot 4 lsp server port
+(setq lsp-gdscript-port "6005")
+
 
 ;; Beacon
 (use-package! beacon
