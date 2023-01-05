@@ -51,14 +51,15 @@
 ;; Godot 4 lsp server port
 (setq lsp-gdscript-port "6005")
 
-;; Garbage collector. Bytes threshold,
+
+;; Garbage collector. Bytes threshold
 ;; garbage collects when hits 100mb
-(setq gc-cons-threshold 100000000)
-;; Whem emacs is idle for X seconds, it garbage-collects
-(run-with-idle-timer 4 t (lambda ()
-                           (garbage-collect)
-                           ;; (message "garbage collected")
-))
+;; (setq gc-cons-threshold 200000000)
+;; ;; Whem emacs is idle for X seconds, it garbage-collects
+;; (run-with-idle-timer 4 t (lambda ()
+;;                            (garbage-collect)
+;;                            ;; (message "garbage collected")
+;; ))
 
 
 ;; Beacon
