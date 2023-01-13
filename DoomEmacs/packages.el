@@ -6,7 +6,7 @@
 ;; use 'M-x doom/reload'.
 
 ;; Languages Packages
-(package! gdscript-mode)
+;; (package! gdscript-mode)
 (package! rustic)
 
 ;; Visual / Misc Packages
