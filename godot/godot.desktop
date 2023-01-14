@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Godot
+StartupWMClass=godot
+Comment=The game engine you are waiting for.
+GenericName=Game Engine
+Exec=/home/menta/godot/godot
+Icon=godot
+Type=Application
+Path=/usr/bin
