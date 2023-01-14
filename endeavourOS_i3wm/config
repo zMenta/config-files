@@ -307,18 +307,21 @@ set $ws10 "10"
 #workspace $ws4 output HDMI-0
 #workspace $ws5 output HDMI-0
 
-# bind program to workspace and focus to them on startup:
+## bind program to workspace and focus to them on startup:
 assign [class="Xfce4-terminal"] $ws1
 assign [class="Brave"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Thunar"] $ws4
-assign [class="Discord"] $ws5
+assign [class="Godot"] $ws4
+assign [class="discord"] $ws5
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
 for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
+for_window [class=Godot] focus
+
 
 
 ##############
