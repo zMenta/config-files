@@ -314,6 +314,7 @@ assign [class="Emacs"] $ws3
 assign [class="Thunar"] $ws4
 assign [class="Godot"] $ws4
 assign [class="discord"] $ws5
+assign [class="obs"] $ws6
 
 # automatic set focus new window if it opens on another workspace than the current:
 for_window [class=Xfce4-terminal] focus
@@ -321,7 +322,6 @@ for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
 for_window [class=Godot] focus
-
 
 
 ##############
