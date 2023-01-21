@@ -311,7 +311,7 @@ set $ws10 "10"
 assign [class="Xfce4-terminal"] $ws1
 assign [class="Brave"] $ws2
 assign [class="Emacs"] $ws3
-assign [class="Thunar"] $ws4
+# assign [class="Thunar"] $ws4
 assign [class="Godot"] $ws4
 assign [class="discord"] $ws5
 assign [class="obs"] $ws6
