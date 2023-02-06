@@ -3,22 +3,30 @@
 
 
 (setq user-full-name "Lucas V. Moog Brentano")
+(setq user-mail-address "brentano.l@gmail.com")
 
 
 ;; Theme and editor visual configuration
 (setq doom-theme 'doom-one)
 
-(setq doom-font (font-spec :size 15))
+(setq doom-font (font-spec :size 16))
 (setq scroll-margin '15)
 (setq display-line-numbers-type 'relative)
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
+
+;; Editor configuration
+;; (setq gc-cons-threshold 100000000) ;; 1mb
+;; (setq read-process-output-max 600000000) ;; 6mb
+
+;; This config fixed Godot LSP completion freeze.
+(setq company-idle-delay 0.3)
 
 
 ;; Org Configuration
 (setq org-directory "~/org/")
 
-(setq org-ellipsis " ⬎")
 ;; (setq org-ellipsis " ▼")
+(setq org-ellipsis " ⬎")
 ;; Sets the org ellipsis symbol to have the same color as the text.
 (custom-set-faces!
   '(org-ellipsis :foreground nil))
@@ -27,9 +35,10 @@
 (setq org-list-demote-modify-bullet
       '(("+" . "*") ("*" . "-") ("-" . "+")))
 
+
 ;; Set faces (font height) for each header bullet levels
 (after! org
-  (dolist (face '((org-level-1 . 1.2)
+  (dolist (face '((org-level-1 . 1.15)
                   (org-level-2 . 1.1)
                   (org-level-3 . 1.05)
                   (org-level-4 . 1.0)
@@ -42,24 +51,13 @@
 
 
 ;; Packages
-;; (require 'gdscript-mode)
+(require 'gdscript-mode)
 (require 'rustic)
 
 
 ;; Lsp
-;;
 ;; Godot 4 lsp server port
 (setq lsp-gdscript-port "6005")
-
-
-;; Garbage collector. Bytes threshold
-;; garbage collects when hits 100mb
-;; (setq gc-cons-threshold 200000000)
-;; ;; Whem emacs is idle for X seconds, it garbage-collects
-;; (run-with-idle-timer 4 t (lambda ()
-;;                            (garbage-collect)
-;;                            ;; (message "garbage collected")
-;; ))
 
 
 ;; Beacon
@@ -75,8 +73,7 @@
         (add-hook 'org-mode-hook (lambda () (org-superstar-mode 1)))
         (setq org-superstar-special-todo-items t) ;; Makes a TODO header bullets into check boxes
         (setq org-superstar-headline-bullets-list
-              '("◉" "◎" "○" ))
-
+              '("◎" "◉" "○" ))
   )
 
 ;; Org-Appear
@@ -91,7 +88,7 @@
         (setq org-appear-autosubmarkers t) ;; Enable on subscript and superscript
   )
 
-;; Ox-Reveal
+;; ;; Ox-Reveal
 (use-package! ox-reveal
   :config
         (setq org-reveal-root "https://cdn.jsdelivr.net/npm/reveal.js")
