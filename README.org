@@ -1,6 +1,8 @@
 * This is a configuration repository
    Each folder or file represents a set of configs that I use.
 
+** Nvim Config
+   Remember to download packer to use and install the config.
 
 ** Config texts
 *** .bashrc
