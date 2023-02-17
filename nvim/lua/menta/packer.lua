@@ -70,5 +70,16 @@ return require('packer').startup(function(use)
 		end
 	}
 
+	-- DAP -- 		
+	use 'mfussenegger/nvim-dap'
+
+
+	-- Comment --
+	use {
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup()
+		end
+	}
 
 end)

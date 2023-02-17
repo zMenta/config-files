@@ -11,6 +11,10 @@ wk.register({
 	["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
 
 
+	-- Package Manager --
+	["<leader>S"] = { "<cmd>PackerSync<cr>", "Sync Packages" },
+
+
 	-- +Search --
 	["<leader>s"] = { name = "+Search" },
 	-- Telescope Binds
@@ -63,8 +67,6 @@ wk.register({
 	["<leader>bn"] = { "<cmd>bn<cr>", "Next buffer" },
 	["<leader>bp"] = { "<cmd>bp<cr>", "Previous buffer" },
 	["<leader>bk"] = { "<cmd>bp|bd #<cr>", "Kill current buffer" },
-
-
 
 
 	-- +Code --
