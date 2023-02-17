@@ -72,12 +72,13 @@ wk.register({
 	-- LSP
 	["<leader>ck"] = { "<cmd>vim.lsp.buf.hover<cr>", "LSP|Open documentation" },
 	["<leader>cd"] = { "<cmd>vim.lsp.buf.definition<cr>", "LSP|Definition" },
+	["<leader>cD"] = { "<cmd>vim.lsp.buf.declaration<cr>", "LSP|Declaration" },
 	["<leader>ci"] = { "<cmd>vim.lsp.buf.implementation<cr>", "LSP|Implementation" },
 	["<leader>cs"] = { "<cmd>vim.lsp.buf.signature_help<cr>", "LSP|Signature help" },
 	["<leader>cr"] = { "<cmd>vim.lsp.buf.rename<cr>", "LSP|Rename" },
 	["<leader>cR"] = { "<cmd>vim.lsp.buf.references<cr>", "LSP|References" },
 	-- Telescope Diagnostics
-	["<leader>cD"] = { "<cmd>Telescope diagnostics<cr>", "LSP|Diagnostics" },
+	["<leader>cx"] = { "<cmd>Telescope diagnostics<cr>", "LSP|Diagnostics" },
 	
 
 })

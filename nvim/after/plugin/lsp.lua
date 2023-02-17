@@ -21,7 +21,7 @@ local on_attach = function(client, bufnr)
 	---------------------
 	--     Keymaps     --
 	---------------------
-	 -- vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, bufopts) -- Code Declaration
+	 vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, bufopts) -- Code Declaration
 	 vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, bufopts) -- Code Definition
 	 vim.keymap.set('n', '<leader>ck', vim.lsp.buf.hover, bufopts) -- Code look documentation
 	 vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, bufopts) -- Code Implementation
