@@ -21,21 +21,22 @@ local on_attach = function(client, bufnr)
 	---------------------
 	--     Keymaps     --
 	---------------------
-	 vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, bufopts) -- Code Declaration
+	 -- vim.keymap.set('n', '<leader>cD', vim.lsp.buf.declaration, bufopts) -- Code Declaration
 	 vim.keymap.set('n', '<leader>cd', vim.lsp.buf.definition, bufopts) -- Code Definition
 	 vim.keymap.set('n', '<leader>ck', vim.lsp.buf.hover, bufopts) -- Code look documentation
 	 vim.keymap.set('n', '<leader>ci', vim.lsp.buf.implementation, bufopts) -- Code Implementation
 	 vim.keymap.set('n', '<leader>cs', vim.lsp.buf.signature_help, bufopts) -- Code Signature help
+	 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, bufopts) -- lsp code rename
+	 vim.keymap.set('n', '<leader>cR', vim.lsp.buf.references, bufopts) -- code references
+
+	-- vim.keymap.set('n', '<leader>cf', function() vim.lsp.buf.format { async = true } end, bufopts) -- code format
 	--  vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, bufopts)
 	--  vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, bufopts)
 	--  vim.keymap.set('n', '<space>wl', function()
 	--    print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
 	--  end, bufopts)
 	-- vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition, bufopts)
-	 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, bufopts) -- lsp code rename
-	 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts) -- code actions
-	 vim.keymap.set('n', '<leader>cR', vim.lsp.buf.references, bufopts) -- code references
-	 vim.keymap.set('n', '<leader>cf', function() vim.lsp.buf.format { async = true } end, bufopts) -- code format
+	-- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts) -- code actions
 	----------------------
 
 	local _notify = client.notify

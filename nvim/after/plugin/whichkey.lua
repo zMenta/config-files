@@ -65,10 +65,6 @@ wk.register({
 	["<leader>bk"] = { "<cmd>bp|bd #<cr>", "Kill current buffer" },
 
 
-	-- +Diagnostic --
-	["<leader>d"] = { name = "+Diagnostic" },
-	-- Telescope Diagnostics
-	["<leader>dd"] = { "<cmd>Telescope diagnostics<cr>", "Open diagnostics" },
 
 
 	-- +Code --
@@ -80,6 +76,8 @@ wk.register({
 	["<leader>cs"] = { "<cmd>vim.lsp.buf.signature_help<cr>", "LSP|Signature help" },
 	["<leader>cr"] = { "<cmd>vim.lsp.buf.rename<cr>", "LSP|Rename" },
 	["<leader>cR"] = { "<cmd>vim.lsp.buf.references<cr>", "LSP|References" },
+	-- Telescope Diagnostics
+	["<leader>cD"] = { "<cmd>Telescope diagnostics<cr>", "LSP|Diagnostics" },
 	
 
 })
