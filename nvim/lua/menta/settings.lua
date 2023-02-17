@@ -27,6 +27,6 @@ vim.opt.termguicolors = true
 
 vim.opt.scrolloff = 8 -- Min vertical lines surrounding the cursor.
 vim.opt.signcolumn = "yes" -- More space on the line number column.
--- vim.opt.isfname:append("@-@")
+vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
