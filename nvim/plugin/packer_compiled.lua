@@ -191,6 +191,11 @@ _G.packer_plugins = {
     path = "/home/menta/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
   },
+  ["telescope-project.nvim"] = {
+    loaded = true,
+    path = "/home/menta/.local/share/nvim/site/pack/packer/start/telescope-project.nvim",
+    url = "https://github.com/nvim-telescope/telescope-project.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/menta/.local/share/nvim/site/pack/packer/start/telescope.nvim",

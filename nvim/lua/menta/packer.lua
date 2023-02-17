@@ -15,6 +15,17 @@ return require('packer').startup(function(use)
 	}
 
 
+	-- Telescope File Browser --
+	use {
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	}
+
+
+	-- Telescope Project -- 
+	use "nvim-telescope/telescope-project.nvim"
+
+
 	-- Color Themes -- 
 	use 'navarasu/onedark.nvim' --Onedark
 	use 'folke/tokyonight.nvim' -- Tokyo Night
@@ -92,13 +103,6 @@ return require('packer').startup(function(use)
 
 	-- Indent Blankline --
 	use "lukas-reineke/indent-blankline.nvim"
-
-
-	-- Telescope File Browser --
-	use {
-		"nvim-telescope/telescope-file-browser.nvim",
-		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-	}
 
 
 end)
