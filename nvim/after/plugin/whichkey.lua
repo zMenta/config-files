@@ -11,6 +11,14 @@ wk.register({
 	["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
 
 
+	-- +Search --
+	["<leader>s"] = { name = "+Search" },
+	-- Telescope Binds
+	["<leader>sc"] = { "<cmd>Telescope commands<cr>", "Commands" },
+	["<leader>sk"] = { "<cmd>Telescope keymaps<cr>", "Keybinds" },
+	["<leader>sb"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
+
+
 	-- +Toggle --
 	["<leader>t"] = { name = "+Toggle" },
 	-- Undotree
