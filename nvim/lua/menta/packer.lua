@@ -100,9 +100,10 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
-
 	-- Indent Blankline --
 	use "lukas-reineke/indent-blankline.nvim"
 
+	-- Git signs --
+	use 'lewis6991/gitsigns.nvim' 
 
 end)
