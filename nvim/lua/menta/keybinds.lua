@@ -4,7 +4,6 @@
 -- Also refer to the whichkey.lua --
 ------------------------------------
 
-
 -- Sets the leader key to space
 vim.g.mapleader = " "
 
@@ -12,6 +11,8 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>o", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 
+-- In terminal mode goes back to normal mode by pressing <ESC>
+vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
 vim.keymap.set("n", "<leader>oe", vim.cmd.Explore)

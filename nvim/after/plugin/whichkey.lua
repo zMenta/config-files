@@ -17,6 +17,9 @@ wk.register({
 	-- Telescope Project --
 	["<leader>p"] = { "<cmd>Telescope file_browser<cr>", "Telescope|Projects" },
 
+	-- Quit Keybind --
+	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
+
 
 	-- Package Manager --
 	["<leader>S"] = { "<cmd>PackerSync<cr>", "Sync Packages" },
@@ -34,6 +37,8 @@ wk.register({
 	["<leader>t"] = { name = "+Toggle" },
 	-- Undotree
 	["<leader>tu"] = { "<cmd>UndotreeToggle<cr>", "Undotree" },
+	-- ToggleTerm
+	["<leader>tt"] = { "<cmd>ToggleTerm<cr>", "Terminal" },
 
 
 	-- +Open --
