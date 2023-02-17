@@ -59,11 +59,8 @@ wk.register({
 
 	-- +Diagnostic --
 	["<leader>d"] = { name = "+Diagnostic" },
-	-- See `:help vim.diagnostic.*` for documentation on any of the below functions
-	["<leader>dd"] = { "<cmd>vim.diagnostic.open_float<cr>", "Open diagnostic hover" },
-	["<leader>dp"] = { "<cmd>vim.diagnostic.goto_prev<cr>", "Previous diagnostic" },
-	["<leader>dn"] = { "<cmd>vim.diagnostic.goto_next<cr>", "Next diagnostic" },
-	["<leader>dl"] = { "<cmd>vim.diagnostic.setloclist<cr>", "Diagnostic list" },
+	-- Telescope Diagnostics
+	["<leader>dd"] = { "<cmd>Telescope diagnostics<cr>", "Open diagnostics" },
 
 
 	-- +Code --
