@@ -89,4 +89,16 @@ return require('packer').startup(function(use)
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 	}
 
+
+	-- Indent Blankline --
+	use "lukas-reineke/indent-blankline.nvim"
+
+
+	-- Telescope File Browser --
+	use {
+		"nvim-telescope/telescope-file-browser.nvim",
+		requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+	}
+
+
 end)

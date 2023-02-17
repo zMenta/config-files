@@ -11,6 +11,10 @@ wk.register({
 	["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
 
 
+	-- Telescope File Browser --
+	["<leader>."] = { "<cmd>Telescope file_browser<cr>", "Find Buffer" },
+
+
 	-- Package Manager --
 	["<leader>S"] = { "<cmd>PackerSync<cr>", "Sync Packages" },
 
