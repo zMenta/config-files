@@ -39,6 +39,10 @@ wk.register({
 	["<leader>tu"] = { "<cmd>UndotreeToggle<cr>", "Undotree" },
 	-- ToggleTerm
 	["<leader>tt"] = { "<cmd>ToggleTerm<cr>", "Terminal" },
+	-- TroubleToggle
+	["<leader>tx"] = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
+	-- LSP Lines 
+	["<leader>tl"] = { require("lsp_lines").toggle, "Lsp lines" },
 
 
 	-- +Open --
