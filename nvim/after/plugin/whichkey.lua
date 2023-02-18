@@ -15,7 +15,7 @@ wk.register({
 	["<leader>."] = { "<cmd>Telescope file_browser<cr>", "Telescope|Browse files" },
 
 	-- Telescope Project --
-	["<leader>p"] = { "<cmd>Telescope file_browser<cr>", "Telescope|Projects" },
+	["<leader>p"] = { "<cmd>Telescope project<cr>", "Telescope|Projects" },
 
 	-- Quit Keybind --
 	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },

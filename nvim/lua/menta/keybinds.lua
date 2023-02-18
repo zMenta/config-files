@@ -33,10 +33,15 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Pastes the yank clipboard deleting the visual mode selection region without overwriting your clipboard.
 vim.keymap.set("x", "<C-p>", [["_dP]])
 
--- FIX
+-- FIXME
 -- Yank to your computer clipboard, not just inside neovim.
 -- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Substitute all words on selected by the cursor.
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- folds
+vim.keymap.set("n", "zm", "zM") -- Fold all
+vim.keymap.set("n", "zr", "zR") -- Unfold all
+
