@@ -29,7 +29,3 @@ vim.opt.signcolumn = "yes" -- More space on the line number column.
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
--- Enable tree-sitter code folding 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
