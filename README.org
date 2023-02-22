@@ -38,7 +38,8 @@ Use the files in the godot folder.
 
 Usage example:
 #+BEGIN_EXAMPLE
- # In terminal.
+ ## In terminal.
+ # Goes to the godot project path.
  cd my_godot_project
  gvim 
 
