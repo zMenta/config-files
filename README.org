@@ -24,5 +24,21 @@ export PATH="$HOME/godot:$PATH"
  exec flags: -a "" +{line}:{col} {file}
 #+END_EXAMPLE
 
-** Creating an emacsclient desktop shortcut
-- Consult EmacsClient Desktop File folder
+
+*** Godot External Editor as NeoVim
+Use the files in the godot folder. 
+- Select the openGodotFile.sh for the exec flag.
+- To properly open files in the nvim, open the godot project containing the godot.project file and run /gvim/.
+Example:
+#+BEGIN_EXAMPLE
+ # In terminal.
+ cd my_godot_project
+ gvim # Same as running: nvim --listen ~/.cache/nvim/godot.pipe .
+#+END_EXAMPLE
+
+- Godot config:
+#+BEGIN_EXAMPLE
+ exec path: /**Path_To**/openGodotFile.sh
+ exec flags: {file}
+#+END_EXAMPLE
+
