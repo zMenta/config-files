@@ -33,7 +33,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- Pastes the yank clipboard deleting the visual mode selection region without overwriting your clipboard.
 vim.keymap.set("x", "<C-p>", [["_dP]])
 
--- FIXME
+-- FIXME:
 -- Yank to your computer clipboard, not just inside neovim.
 -- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 -- vim.keymap.set("n", "<leader>Y", [["+Y]])

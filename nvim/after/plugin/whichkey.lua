@@ -50,6 +50,8 @@ wk.register({
 	-- (Ex)plorer
 	["<leader>oe"] = { "<cmd>Ex<cr>", "Explorer" },
 	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Config Files" },
+	-- Todo Comments 
+	["<leader>ot"] = { "<cmd>TodoTelescope<cr>", "Todo list" },
 
 
 	-- +Git --
