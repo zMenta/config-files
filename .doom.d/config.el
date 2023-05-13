@@ -1,11 +1,6 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
-(setq user-full-name "Lucas V. Moog Brentano")
-(setq user-mail-address "brentano.l@gmail.com")
-
-
 ;; Theme and editor visual configuration
 (setq doom-theme 'doom-one)
 
