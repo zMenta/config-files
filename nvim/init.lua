@@ -1,1 +1,1 @@
-require("menta")
+require("core")
