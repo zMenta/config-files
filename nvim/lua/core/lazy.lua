@@ -35,7 +35,7 @@ local plugins = {
 	"lewis6991/gitsigns.nvim",
 
 	-- Dependencies --
-	'nvim-lua/plenary.nvim',
+	'nvim-lua/plenary.nvim', -- harpoon, telescope
 
 	-- Utility & Tools --
 	{'nvim-telescope/telescope.nvim', tag = '0.1.1'},
@@ -51,7 +51,7 @@ local plugins = {
 		vim.o.timeoutlen = 300
 	  end,
 	},
-	
+
 	-- Treesitter -- 
 	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,},
 
@@ -62,12 +62,7 @@ local plugins = {
 	  dependencies = {
 	    -- LSP Support
 	    {'neovim/nvim-lspconfig'},             -- Required
-	    {                                      -- Optional
-	      'williamboman/mason.nvim',
-	      build = function()
-		pcall(vim.cmd, 'MasonUpdate')
-	      end,
-	    },
+	    {'williamboman/mason.nvim', build = function() pcall(vim.cmd, 'MasonUpdate') end,},  -- Optional
 	    {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
 	    -- Autocompletion
