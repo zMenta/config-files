@@ -4,7 +4,6 @@ wk.register({
 	--------------
 	-- Prefixes --
 	--------------
-
 	-- +File --
 	["<leader>f"] = { name = "+File" },
 
@@ -22,19 +21,21 @@ wk.register({
 	-- Nothing here.
 	
 
-
 	-------------------------
 	-- Additional Keybinds --
 	-------------------------
-	
 	-- Package Manager --
 	["<leader>L"] = { "<cmd>Lazy<cr>", "Lazy" },
 
-	-- Explore Config Files --
-	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Explore config files" },
-
 	-- Quit Nvim --
 	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
+
+
+	-- +Open --
+	["<leader>o"] = { name = "+Open" },
+	-- Explore Config Files --
+	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Open config files" },
+
 
 	-- +Window --
 	["<leader>w"] = { name = "+Window" },

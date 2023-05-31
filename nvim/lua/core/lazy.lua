@@ -1,10 +1,12 @@
-----------------------------------------
--- Lazy configuration and plugin list --
-----------------------------------------
+------------------------------------------------------
+--      Lazy configuration and plugin list          --
+------------------------------------------------------
+-- Plugin specific config is found in after/plugin ---
+------------------------------------------------------
 
 
 ----------------------------------------
--- Installs Lazy if not installed ------
+-- Installs Lazy if not installed     --
 ----------------------------------------
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -21,9 +23,9 @@ vim.opt.rtp:prepend(lazypath)
 
 
 
-------------------
---  Plugin list --
-------------------
+-------------------
+--  Plugin list  --
+-------------------
 local plugins = {
 	-- Color Theme --
 	{"navarasu/onedark.nvim", lazy = false, priority = 1000},

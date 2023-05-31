@@ -1,7 +1,7 @@
 local builtin = require('telescope.builtin')
 
 -- File Related --
-vim.keymap.set('n', '<leader><leader>', builtin.git_files, { desc = "Find files in current git project" }) -- find files in git repository
+vim.keymap.set('n', '<leader><leader>', builtin.git_files, { desc = "Find files in current git project" })
 vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = "Find File"})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = "Grep file contents" })
 
