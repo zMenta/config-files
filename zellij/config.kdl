@@ -1,6 +1,7 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
     normal {
+        bind "Ctrl w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
@@ -193,7 +194,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -248,9 +249,26 @@ themes {
         white 229 233 240 // #E5E9F0
         orange 208 135 112 // #D08770
     }
+
+	// Color pallete based from nvim.onedark - dark theme
+	// Scuffed theme to "work" with the compact plugin.
+    onedark {
+        fg "#5c6370"
+        bg "#31353f" // Original onedark 
+        black "#282c34" // Compact bar background
+        red "#e86671"
+        green 163 190 140 // #A3BE8C
+        green "#bed1ad"
+        yellow "#e5c07b"
+        blue "#61afef"
+        magenta 180 142 173 // #B48EAD
+        cyan "#2b6f77"
+        white "#5c6370"
+        orange "#d19a66"
+    }
 }
 
-theme "nord"
+theme "onedark"
 
 // Choose the theme that is specified in the themes section.
 // Default: default
