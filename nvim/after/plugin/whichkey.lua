@@ -1,63 +1,40 @@
 local wk = require("which-key")
 
 wk.register({
-
+	--------------
+	-- Prefixes --
+	--------------
 	-- +File --
 	["<leader>f"] = { name = "+File" },
-	-- Telescope Binds
-	["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find File" },
-	["<leader><leader>"] = { "<cmd>Telescope git_files<cr>", "Find files in current git project" },
-	["<leader>fg"] = { "<cmd>Telescope live_grep<cr>", "Grep Files" },
-	["<leader>fb"] = { "<cmd>Telescope buffers<cr>", "Find Buffer" },
 
-
-	-- Telescope File Browser --
-	["<leader>."] = { "<cmd>Telescope file_browser<cr>", "Telescope|Browse files" },
-
-	-- Telescope Project --
-	["<leader>p"] = { "<cmd>Telescope project<cr>", "Telescope|Projects" },
-
-	-- Quit Keybind --
-	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
-
-
-	-- Package Manager --
-	["<leader>S"] = { "<cmd>PackerSync<cr>", "Sync Packages" },
-
+	-- +Harpoon --
+	["<leader>h"] = { name = "+Harpoon" },
 
 	-- +Search --
 	["<leader>s"] = { name = "+Search" },
-	-- Telescope Binds
-	["<leader>sc"] = { "<cmd>Telescope commands<cr>", "Commands" },
-	["<leader>sk"] = { "<cmd>Telescope keymaps<cr>", "Keybinds" },
-	["<leader>sb"] = { "<cmd>Telescope current_buffer_fuzzy_find<cr>", "Current Buffer" },
 
+	-- +Git --
+	["<leader>g"] = { name = "+Git" },
 
-	-- +Toggle --
-	["<leader>t"] = { name = "+Toggle" },
-	-- Undotree
-	["<leader>tu"] = { "<cmd>UndotreeToggle<cr>", "Undotree" },
-	-- ToggleTerm
-	["<leader>tt"] = { "<cmd>ToggleTerm<cr>", "Terminal" },
-	-- TroubleToggle
-	["<leader>tx"] = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
-	-- LSP Lines 
-	["<leader>tl"] = { require("lsp_lines").toggle, "Lsp lines" },
+	-- +Code --
+	-- ["<leader>c"] = { name = "+Code" },
+	-- Nothing here.
+	
+
+	-------------------------
+	-- Additional Keybinds --
+	-------------------------
+	-- Package Manager --
+	["<leader>L"] = { "<cmd>Lazy<cr>", "Lazy" },
+
+	-- Quit Nvim --
+	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
 
 
 	-- +Open --
 	["<leader>o"] = { name = "+Open" },
-	-- (Ex)plorer
-	["<leader>oe"] = { "<cmd>Ex<cr>", "Explorer" },
-	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Config Files" },
-	-- Todo Comments 
-	["<leader>ot"] = { "<cmd>TodoTelescope<cr>", "Todo list" },
-
-
-	-- +Git --
-	["<leader>g"] = { name = "+Git" },
-	-- Neogit
-	["<leader>gg"] = { "<cmd>Neogit<cr>", "Open Neogit" },
+	-- Explore Config Files --
+	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Open config files" },
 
 
 	-- +Window --
@@ -85,20 +62,5 @@ wk.register({
 	["<leader>bn"] = { "<cmd>bn<cr>", "Next buffer" },
 	["<leader>bp"] = { "<cmd>bp<cr>", "Previous buffer" },
 	["<leader>bk"] = { "<cmd>bp|bd #<cr>", "Kill current buffer" },
-
-
-	-- +Code --
-	["<leader>c"] = { name = "+Code" },
-	-- LSP
-	["<leader>ck"] = { "<cmd>vim.lsp.buf.hover<cr>", "LSP|Open documentation" },
-	["<leader>cd"] = { "<cmd>vim.lsp.buf.definition<cr>", "LSP|Definition" },
-	["<leader>cD"] = { "<cmd>vim.lsp.buf.declaration<cr>", "LSP|Declaration" },
-	["<leader>ci"] = { "<cmd>vim.lsp.buf.implementation<cr>", "LSP|Implementation" },
-	["<leader>cs"] = { "<cmd>vim.lsp.buf.signature_help<cr>", "LSP|Signature help" },
-	["<leader>cr"] = { "<cmd>vim.lsp.buf.rename<cr>", "LSP|Rename" },
-	["<leader>cR"] = { "<cmd>vim.lsp.buf.references<cr>", "LSP|References" },
-	-- Telescope Diagnostics
-	["<leader>cx"] = { "<cmd>Telescope diagnostics<cr>", "LSP|Diagnostics" },
-	
 
 })
