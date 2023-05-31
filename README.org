@@ -1,9 +1,6 @@
 * This is a configuration repository
    Each folder or file represents a set of configs that I use.
 
-** Nvim Config
-   Remember to download packer to use and install the config.
-
 ** Config texts
 *** .bashrc
 
@@ -12,8 +9,8 @@ export PATH="$HOME/.emacs.d/bin:$PATH"
 alias emacs="emacsclient -c -a ''"
 
 # Godot path in Home/godot/godot(executable). So you can use in the command 'godot' and godot will open.
-# Useful for DoomEmacs gdscript configuration
 export PATH="$HOME/godot:$PATH"
+alias gvim ="nvim --listen ./godothost ."
 #+END_SRC
 
 
@@ -26,6 +23,25 @@ export PATH="$HOME/godot:$PATH"
 
 
 *** Godot External Editor as NeoVim
+**** Godot Config 
+***** Exec path:
+#+BEGIN_EXAMPLE
+nvim
+#+END_EXAMPLE
+
+***** Exec flags:
+#+BEGIN_EXAMPLE
+--server ./godothost --remote-send "<C>:n {file}<CR>"
+#+END_EXAMPLE
+
+*** Opening nvim
+On the project directory containing the .godot file, open nvim with the following command:
+#+BEGIN_EXAMPLE
+nvim --listen ./godothost .
+#+END_EXAMPLE
+It's good to setup an alias to open nvim this way, I have one in my bashrc called `gvim`
+
+* Old Godot Method
 Use the files in the godot folder. 
 - Select the openGodotFile.sh for the exec flag.
 - To properly open files in the nvim, open the godot project containing the project.godot file and run /gvim/.
