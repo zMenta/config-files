@@ -28,6 +28,10 @@ local plugins = {
 	-- Color Theme --
 	{"navarasu/onedark.nvim", lazy = false, priority = 1000},
 
+	-- Look and Feel --
+	"lukas-reineke/indent-blankline.nvim",
+	"lewis6991/gitsigns.nvim",
+
 	-- Dependencies --
 	'nvim-lua/plenary.nvim',
 
@@ -36,6 +40,15 @@ local plugins = {
 	'ThePrimeagen/harpoon',
 	'mbbill/undotree',
 	'TimUntersberger/neogit',
+	'numToStr/Comment.nvim',
+	{
+	  "folke/which-key.nvim",
+	  event = "VeryLazy",
+	  init = function()
+		vim.o.timeout = true
+		vim.o.timeoutlen = 300
+	  end,
+	},
 	
 	-- Treesitter -- 
 	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,},

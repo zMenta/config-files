@@ -1,8 +1,10 @@
-------------------------------------
---           Keybinds             --
-------------------------------------
--- Also refer to the whichkey.lua --
-------------------------------------
+-------------------------------------------------
+--                  Keybinds                   --
+-------------------------------------------------
+-- Also refer to the after/plugin/whichkey.lua --
+-------------------------------------------------
+
+-- `desc` are descriptions of the keybind. Whichkey read this value.
 
 -- Sets the leader key to space
 vim.g.mapleader = " "
@@ -15,7 +17,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
-vim.keymap.set("n", "<leader>e", vim.cmd.Explore)
+vim.keymap.set("n", "<leader>e", vim.cmd.Explore, { desc = "Open Explorer" })
 
 -- Let you move the selected area up or down.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -34,13 +36,13 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<C-p>", [["_dP]])
 
 -- Yank to your computer clipboard, not just inside neovim.
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
-vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipboard"})
+-- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Substitute all words on selected by the cursor.
-vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all words under cursor"})
 
 -- folds
-vim.keymap.set("n", "zm", "zM") -- Fold all
-vim.keymap.set("n", "zr", "zR") -- Unfold all
+vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
+vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
 
