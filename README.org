@@ -41,25 +41,25 @@ nvim --listen ./godothost .
 #+END_EXAMPLE
 It's good to setup an alias to open nvim this way, I have one in my bashrc called `gvim`
 
-* Old Godot Method
-Use the files in the godot folder. 
-- Select the openGodotFile.sh for the exec flag.
-- To properly open files in the nvim, open the godot project containing the project.godot file and run /gvim/.
+# ** Old Godot Method
+# Use the files in the godot folder. 
+# - Select the openGodotFile.sh for the exec flag.
+# - To properly open files in the nvim, open the godot project containing the project.godot file and run /gvim/.
 
-- Godot config:
-#+BEGIN_EXAMPLE
- exec path: /**Path_To**/openGodotFile.sh
- exec flags: {file}
-#+END_EXAMPLE
+# - Godot config:
+# #+BEGIN_EXAMPLE
+#  exec path: /**Path_To**/openGodotFile.sh
+#  exec flags: {file}
+# #+END_EXAMPLE
 
-Usage example:
-#+BEGIN_EXAMPLE
- ## In terminal.
- # Goes to the godot project path.
- cd my_godot_project
- gvim 
+# Usage example:
+# #+BEGIN_EXAMPLE
+#  ## In terminal.
+#  # Goes to the godot project path.
+#  cd my_godot_project
+#  gvim 
 
-# gvim is the same as running: nvim --listen ~/.cache/nvim/godot.pipe .
-#+END_EXAMPLE
-Now you can click on godot editor script files and it will open in nvim.
+# # gvim is the same as running: nvim --listen ~/.cache/nvim/godot.pipe .
+# #+END_EXAMPLE
+# Now you can click on godot editor script files and it will open in nvim.
 
