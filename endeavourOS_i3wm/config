@@ -171,7 +171,9 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec xfce4-terminal
+# Opens alacritty and zellij.
+bindsym $mod+Return exec alacritty -e zellij
+
 
 # kill focused window
 bindsym $mod+q kill
