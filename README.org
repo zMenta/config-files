@@ -13,8 +13,6 @@ alias emacs="emacsclient -c -a ''"
 # Godot path in Home/godot/godot(executable). So you can use in the command 'godot' and godot will open.
 export PATH="$HOME/godot:$PATH"
 alias gvim="nvim --listen ./godothost ."
-
-alias z="zellij"
 #+END_SRC
 
 
