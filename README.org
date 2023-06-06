@@ -1,6 +1,8 @@
 * This is a configuration repository
    Each folder or file represents a set of configs that I use.
 
+   - Most configs use FiraMonoNerdFont
+
 ** Config texts
 *** .bashrc
 
