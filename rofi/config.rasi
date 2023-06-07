@@ -1,0 +1,7 @@
+configuration {
+  modes: [ drun, run, calc ];
+}
+
+@theme "Arc-Dark"
+ 
+/* Insert theme modifications after this */
