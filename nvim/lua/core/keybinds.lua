@@ -47,8 +47,9 @@ vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
 vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
 
 -- autopairs
-vim.keymap.set("i", '"', '""<left>', {desc = 'Autopairs " character'})
-vim.keymap.set("i", "'", "''<left>", {desc = "Autopairs ' character"})
+vim.keymap.set("i", '"', [[""<left>]], {desc = 'Autopairs " character'})
+vim.keymap.set("i", "'", [[''<left>]], {desc = "Autopairs ' character"})
 vim.keymap.set("i", "(", "()<left>", {desc = "Autopairs ( character"})
 vim.keymap.set("i", "[", "[]<left>", {desc = "Autopairs [ character"})
 vim.keymap.set("i", "{", "{}<left>", {desc = "Autopairs { character"})
+
