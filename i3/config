@@ -247,6 +247,8 @@ bindsym Print exec flameshot gui
 bindsym $mod+d exec rofi -modi drun -show drun \
 		-config ~/.config/rofi/rofidmenu.rasi
 
+bindsym $mod+Shift+d exec rofi -show run 
+
 bindsym $mod+t exec rofi -show window \
 		-config ~/.config/rofi/rofidmenu.rasi
 
