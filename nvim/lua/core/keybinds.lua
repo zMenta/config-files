@@ -52,4 +52,3 @@ vim.keymap.set("i", "'", [[''<left>]], {desc = "Autopairs ' character"})
 vim.keymap.set("i", "(", "()<left>", {desc = "Autopairs ( character"})
 vim.keymap.set("i", "[", "[]<left>", {desc = "Autopairs [ character"})
 vim.keymap.set("i", "{", "{}<left>", {desc = "Autopairs { character"})
-

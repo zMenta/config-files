@@ -27,15 +27,14 @@ vim.opt.rtp:prepend(lazypath)
 --  Plugin list  --
 -------------------
 local plugins = {
-	-- Color Theme --
-	{"navarasu/onedark.nvim", lazy = false, priority = 1000},
-
 	-- Look and Feel --
+	{"navarasu/onedark.nvim", lazy = false, priority = 1000}, -- Color theme
+	"nvim-lualine/lualine.nvim", -- Status line
 	"lukas-reineke/indent-blankline.nvim",
 	"lewis6991/gitsigns.nvim",
 
 	-- Dependencies --
-	'nvim-lua/plenary.nvim', -- harpoon, telescope
+	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
 
 	-- Utility & Tools --
 	{'nvim-telescope/telescope.nvim', tag = '0.1.1'},
@@ -54,6 +53,11 @@ local plugins = {
 
 	-- Treesitter -- 
 	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,},
+
+	-- Debugging --
+	"mfussenegger/nvim-dap",
+	"theHamsta/nvim-dap-virtual-text",
+	"rcarriga/nvim-dap-ui",
 
 	-- Completion and LSP --
 	{

@@ -16,16 +16,21 @@ wk.register({
 	-- +Git --
 	["<leader>g"] = { name = "+Git" },
 
+	-- +Dap --
+	["<leader>d"] = { name = "+Dap" },
+
 	-- +Code --
 	-- ["<leader>c"] = { name = "+Code" },
 	-- Nothing here.
-	
+
 
 	-------------------------
 	-- Additional Keybinds --
 	-------------------------
 	-- Package Manager --
-	["<leader>L"] = { "<cmd>Lazy<cr>", "Lazy" },
+	["<leader>L"] = { "<cmd>Lazy<cr>", "Open Lazy" },
+	-- Mason --
+	["<leader>M"] = { "<cmd>Mason<cr>", "Open Mason" },
 
 	-- Quit Nvim --
 	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
