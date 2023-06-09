@@ -7,6 +7,15 @@
 # config starts here: #
 #######################
 
+
+########################
+# Sets keyboard layout #
+########################
+# br -> Portuguese (Brazil)
+# us -> English (US)
+set $keyboard_layout us
+
+
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -49,17 +58,17 @@ bindsym $mod+8    workspace  $ws8
 bindsym $mod+9    workspace  $ws9
 bindsym $mod+0    workspace  $ws10
 
-# switch to workspace with numpad keys
-bindcode $mod+87 workspace 1
-bindcode $mod+88 workspace 2
-bindcode $mod+89 workspace 3
-bindcode $mod+83 workspace 4
-bindcode $mod+84 workspace 5
-bindcode $mod+85 workspace 6
-bindcode $mod+79 workspace 7
-bindcode $mod+80 workspace 8
-bindcode $mod+81 workspace 9
-bindcode $mod+90 workspace 10
+# switch to workspace swith numpad keys
+bindcode $mod+87 workspace $ws1
+bindcode $mod+88 workspace $ws2
+bindcode $mod+89 workspace $ws3
+bindcode $mod+83 workspace $ws4
+bindcode $mod+84 workspace $ws5
+bindcode $mod+85 workspace $ws6
+bindcode $mod+79 workspace $ws7
+bindcode $mod+80 workspace $ws8
+bindcode $mod+81 workspace $ws9
+bindcode $mod+90 workspace $ws10
 
 # switch to workspace with numlock numpad keys
 bindcode $mod+Mod2+87 workspace $ws1
@@ -261,11 +270,11 @@ bindsym $mod+c exec rofi -show calc
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:1"
-set $ws2 "2:2"
-set $ws3 "3:3"
-set $ws4 "4:4"
-set $ws5 "5:5"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
@@ -314,9 +323,12 @@ for_window [class=Godot] focus
 #exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 
-#############################################
-# autostart applications/services on login: #
-#############################################
+######################################################
+# autostart applications/services/commands on login: #
+######################################################
+
+# Sets keyboard layout
+exec_always setxkbmap $keyboard_layout
 
 # Autostart apps as you like
 # Examples:
@@ -329,7 +341,6 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 
 # TODO set wallpaper
 # exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
-
 
 
 ##################
@@ -389,6 +400,3 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 ################
 
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-
-
-
