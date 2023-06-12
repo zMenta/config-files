@@ -53,7 +53,7 @@ sudo systemctl enable NetworkManager
 echo " -> ly - Login Manager"
 sudo systemctl enable ly.service
 
-# Adding the user to video group, so in polybar can change the backlight levels.
+# Adding the user to video group and adding a backlight rule, so polybar can change the backlight levels.
 # check https://wiki.archlinux.org/title/Backlight#ACPI for more info.
 rule='ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"'
 rule_path="/etc/udev/rules.d/backlight.rules"
