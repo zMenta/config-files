@@ -1,0 +1,79 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+window:
+  padding:
+   x: 0
+   y: 0
+
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: true
+  opacity: 1
+
+  # Window class (Linux/BSD only):
+  class:
+    # Application instance name
+    instance: Alacritty
+    # General application class
+    general: Alacritty
+
+
+scrolling:
+  # Maximum number of lines in the scrollback buffer.
+  # Specifying '0' will disable scrolling.
+  history: 5000
+  # Scrolling distance multiplier.
+  multiplier: 3
+
+
+font:
+  normal:
+    family: FiraMonoNerdFont
+    style: Regular
+  bold:
+    family: FiraMonoNerdFont
+    style: Bold
+  italic:
+    family: FiraMonoNerdFont
+    style: Italic
+  bold_italic:
+    family: FiraMonoNerdFont
+    style: BoldItalic
+  size: 12.0
+
+  # Offset for each character.
+  offset:
+   x: 0
+   y: 1
+
+# If `true`, bold text is drawn using the bright color variants.
+draw_bold_text_with_bright_colors: false
+
+# DoomOne theme
+# colors:
+#   primary:
+#     background: '#282c34'
+#     foreground: '#bbc2cf'
+#   cursor:
+#     text: CellBackground
+#     cursor: '#528bff'
+#   selection:
+#     text: CellForeground
+#     background: '#3e4451'
+#   normal:
+#     black:   '#1c1f24'
+#     red:     '#ff6c6b'
+#     green:   '#98be65'
+#     yellow:  '#da8548'
+#     blue:    '#51afef'
+#     magenta: '#c678dd'
+#     cyan:    '#5699af'
+#     white:   '#abb2bf'
+#   bright:
+#     black:   '#5b6268'
+#     red:     '#da8548'
+#     green:   '#4db5bd'
+#     yellow:  '#ecbe7b'
+#     blue:    '#3071db'   # This is 2257a0 in Doom Emacs but Derek lightened it.
+#     magenta: '#a9a1e1'
+#     cyan:    '#46d9ff'
+#     white:   '#dfdfdf'
