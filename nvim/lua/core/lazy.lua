@@ -40,7 +40,7 @@ local plugins = {
 	{'nvim-telescope/telescope.nvim', tag = '0.1.1'},
 	'ThePrimeagen/harpoon',
 	'mbbill/undotree',
-	'TimUntersberger/neogit',
+	'NeogitOrg/neogit',
 	'numToStr/Comment.nvim',
 	{
 	  "folke/which-key.nvim",
