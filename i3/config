@@ -13,7 +13,7 @@
 ########################
 # br -> Portuguese (Brazil)
 # us -> English (US)
-set $keyboard_layout br
+set $keyboard_layout us
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -307,7 +307,6 @@ for_window [class=Xfce4-terminal] focus
 for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
-for_window [class=Godot] focus
 
 
 ##############
