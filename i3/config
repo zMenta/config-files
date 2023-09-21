@@ -13,7 +13,7 @@
 ########################
 # br -> Portuguese (Brazil)
 # us -> English (US)
-set $keyboard_layout us
+set $keyboard_layout br
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -191,11 +191,13 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+# Not Used
 # split in horizontal orientation
-bindsym $mod+b split h
+# bindsym $mod+b split h
 
+# Not Used
 # split in vertical orientation
-bindsym $mod+v split v
+# bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -247,6 +249,7 @@ bindsym $mod+Return exec alacritty -e zellij
 
 bindsym $mod+n exec thunar
 bindsym Print exec flameshot gui
+bindsym $mod+v exec copyq menu
 
 
 #####################################
@@ -304,6 +307,7 @@ for_window [class=Xfce4-terminal] focus
 for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
+for_window [class=Godot] focus
 
 
 ##############
