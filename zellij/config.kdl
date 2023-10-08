@@ -2,6 +2,7 @@
 keybinds {
     normal {
         bind "Ctrl w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
+	unbind "Ctrl s" // Unbinds the SwitchToMode Scroll
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
     }
