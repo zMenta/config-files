@@ -38,7 +38,7 @@ local plugins = {
 	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
 
 	-- Utility & Tools --
-	{'nvim-telescope/telescope.nvim', tag = '0.1.1'},
+	{'nvim-telescope/telescope.nvim', tag = '0.1.4'},
 	'ThePrimeagen/harpoon',
 	'mbbill/undotree',
 	'NeogitOrg/neogit',
