@@ -1,4 +1,7 @@
-require("indent_blankline").setup {
-    show_current_context = true,
-    show_current_context_start = true,
+local config = {
+	scope = {show_end = false},
+	indent = {char = "┃"}
+	-- indent = {char = "▏"}
 }
+
+require("ibl").setup(config)
