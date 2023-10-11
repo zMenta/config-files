@@ -30,8 +30,9 @@ local plugins = {
 	-- Look and Feel --
 	{"navarasu/onedark.nvim", lazy = false, priority = 1000}, -- Color theme
 	"nvim-lualine/lualine.nvim", -- Status line
-	"lukas-reineke/indent-blankline.nvim",
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
 	"lewis6991/gitsigns.nvim",
+
 
 	-- Dependencies --
 	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
