@@ -41,6 +41,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipbo
 
 -- Substitute all words on selected by the cursor.
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all words under cursor"})
+vim.keymap.set("v", "<C-s>", [[y:%s/\V<C-R>"/<C-R>"/gI<Left><Left><Left>]], { desc = "Replace selected region"})
 
 -- folds
 vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
