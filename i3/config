@@ -294,35 +294,20 @@ set $ws10 "10"
 #workspace $ws5 output HDMI-0
 
 ## bind program to workspace and focus to them on startup:
-assign [class="Xfce4-terminal"] $ws1
 assign [class="Brave"] $ws2
 assign [class="Emacs"] $ws3
 # assign [class="Thunar"] $ws4
 assign [class="Godot"] $ws4
-assign [class="discord"] $ws5
+assign [class="Blender"] $ws5
 assign [class="obs"] $ws6
+assign [class="discord"] $ws8
+assign [class="steam"] $ws9
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Xfce4-terminal] focus
 for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
 
-
-##############
-# compositor #
-##############
-
-# picom: https://wiki.archlinux.org/title/Picom
-# manpage: https://man.archlinux.org/man/picom.1.en
-# The default configuration is available in /etc/xdg/picom.conf 
-# For modifications, it can be copied to ~/.config/picom/picom.conf or ~/.config/picom.conf
-# install picom package (yay -S picom)
-# start using default config 
-#exec_always --no-startup-id picom -b
-#
-# for custom config:
-#exec_always --no-startup-id picom --config  ~/.config/picom.conf
 
 
 ######################################################
@@ -340,9 +325,6 @@ exec_always setxkbmap $keyboard_layout
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
 exec --no-startup-id ~/.screenlayout/monitor.sh
-
-# TODO set wallpaper
-# exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
 
 
 ##################
