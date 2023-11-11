@@ -14,9 +14,10 @@ alias emacs="emacsclient -c -a ''"
 alias gvim="nvim --listen ./godothost ."
 
 # fzf commands
-alias g='cd $(find . -type d -print | fzf)' # Go to directory
-alias p='cd $(find . -type d -print | fzf) && nvim .' # Go to directoy and open nvim
-alias f='nvim $(find . -type f -print | fzf)' # open File with nvim
+alias g='cd $(fd . --hidden --type d | fzf)' # Go to directory
+alias p='cd $(fd . --hidden --type d | fzf) && nvim .' # Go to directoy and open nvim
+alias pg='cd $(fd . --hidden --type d | fzf) && gvim' # Go to directoy and open gvim
+alias f='nvim $(fd . --hidden --type f | fzf)' # open File with nvim
 alias k='ps aux | fzf | awk "{print $2}" | xargs kill' # Kill a process
 #+END_SRC
 
