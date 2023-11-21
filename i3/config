@@ -246,6 +246,7 @@ bindsym $mod+p exec /usr/local/bin/switch-audio-port
 # starts a terminal
 # Open alacritty with zellij.
 bindsym $mod+Return exec alacritty -e zellij
+bindsym $mod+Shift+Return exec alacritty
 
 bindsym $mod+n exec thunar
 bindsym Print exec flameshot gui
