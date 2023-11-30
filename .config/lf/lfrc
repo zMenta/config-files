@@ -1,1 +1,3 @@
+# Bindings
 map <c-s> set hidden! # Show - Toggle hidden files
+map <enter> shell # Open shell prompt 
