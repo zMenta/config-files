@@ -2,13 +2,19 @@
 # alias emacs="emacsclient -c -a ''"
 
 # ########################################### #
-export PATH="$HOME/godot:$PATH"
+export VISUAL=nvim
+export EDITOR="$VISUAL"
 
+export PATH="$HOME/godot:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
 
-alias gvim="nvim --listen ./godothost ."
+# Improved aliases
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
 
-# fd + fzf commands
+# Custom aliases
+alias gvim="nvim --listen ./godothost ."
+## fd + fzf commands
 alias g='cd $(fd . --hidden --type d | fzf)' # Go to directory
 alias p='cd $(fd . --hidden --type d | fzf) && nvim .' # Go to directoy and open nvim
 alias pg='cd $(fd . --hidden --type d | fzf) && gvim' # Go to directoy and open gvim
