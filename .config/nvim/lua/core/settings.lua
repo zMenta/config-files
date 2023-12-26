@@ -24,6 +24,11 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" --So UndoTree can look up older undos and keep track of it.
 vim.opt.undofile = true
 
+-- Misc
+vim.opt.virtualedit = "block" -- In visual block, creates virtual spaces on the screen
+vim.opt.inccommand = "split" -- With substitutions, split the window and show affected lines
+vim.opt.ignorecase = true -- Make autocompletion on commands case insensitive
+
 -- Search highlights
 vim.opt.hlsearch = false -- After search, do not keep searched words highlighted.
 vim.opt.incsearch = true -- Keep highlights being updated while the search in being made.
