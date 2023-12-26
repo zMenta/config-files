@@ -1,0 +1,46 @@
+# Menta's lf config file
+
+
+# Basic settings
+set shellopts '-eu'
+set ignorecase true
+set scrolloff 5
+set previewer '~/.config/lf/preview.sh'
+set autoquit true
+
+# Cmd functions
+## Extracts 
+cmd extracts ${{
+    set -f
+	echo
+	printf "%s\n\t" "$fx"
+	printf "Extract file?[y/N]"
+	read ans
+    case $f in
+        *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+        *.tar.gz|*.tgz) tar xzvf $f;;
+        *.tar.xz|*.txz) tar xJvf $f;;
+        *.extracts) unzip $f;;
+        *.rar) unrar x $f;;
+        *.7z) 7z x $f;;
+    esac
+}}
+
+## Delete selected files
+cmd delete ${{
+	set -f
+	echo
+	printf "%s\n\t" "$fx"
+	printf "Delete file?[y/N]"
+	read ans
+	[ $ans = "y" ] && rm -rf $fx
+}}
+
+
+# Bindings
+map <c-s> set hidden! # Show - Toggle hidden files
+map <enter> shell # Open shell prompt 
+map a extracts 
+map x delete 
+
+map gc cd ~/.config 
