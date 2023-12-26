@@ -7,12 +7,16 @@ vim.opt.relativenumber = true -- Relative line numbers
 vim.opt.wrap = false -- Line Wrap
 
 -- Tab settings
-vim.opt.tabstop = 4
+vim.opt.tabstop = 4 -- Size of tab character
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
--- vim.opt.expandtab = true
+vim.opt.expandtab = true -- Changes the tab character to spaces
 
 vim.opt.smartindent = true -- Smart Indent
+
+-- Splits
+vim.opt.splitbelow = true -- On horizontal split, new window is on the bottom
+vim.opt.splitright = true -- On vertical split, new window is on the right
 
 -- Undos
 vim.opt.swapfile = false
@@ -26,9 +30,8 @@ vim.opt.incsearch = true -- Keep highlights being updated while the search in be
 
 vim.opt.termguicolors = true
 
-vim.opt.scrolloff = 8 -- Min vertical lines surrounding the cursor.
+vim.opt.scrolloff = 14 -- Min vertical lines surrounding the cursor.
 vim.opt.signcolumn = "yes" -- More space on the line number column.
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
-
