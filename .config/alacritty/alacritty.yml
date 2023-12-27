@@ -38,7 +38,7 @@ font:
   bold_italic:
     family: FiraMonoNerdFont
     style: BoldItalic
-  size: 12.0
+  size: 11.0
 
   # Offset for each character.
   offset:
