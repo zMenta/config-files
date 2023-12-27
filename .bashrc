@@ -1,6 +1,9 @@
 # export PATH="$HOME/.emacs.d/bin:$PATH" # Sad emacs noises
 # alias emacs="emacsclient -c -a ''"
 
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
 # ########################################### #
 export VISUAL=nvim
 export EDITOR="$VISUAL"
