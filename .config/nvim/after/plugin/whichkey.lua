@@ -5,7 +5,7 @@ wk.register({
 	-- Prefixes --
 	--------------
 	-- +File --
-	["<leader>f"] = { name = "+File" },
+	-- ["<leader>f"] = { name = "+File" },
 
 	-- +Harpoon --
 	["<leader>h"] = { name = "+Harpoon" },
@@ -14,7 +14,7 @@ wk.register({
 	["<leader>s"] = { name = "+Search" },
 
 	-- +Git --
-	["<leader>g"] = { name = "+Git" },
+	-- ["<leader>g"] = { name = "+Git" },
 
 	-- +Dap --
 	["<leader>d"] = { name = "+Dap" },
