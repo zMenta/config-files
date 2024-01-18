@@ -1,20 +1,16 @@
-
-# This is a modified version of I3 version and EndeavourOS
-
 #######################
 # Menta configuration #
 #######################
-# config starts here: #
-#######################
 
-
-########################
-# Sets keyboard layout #
-########################
+#####################
+# keyboard settings #
+#####################
 # br -> Portuguese (Brazil)
 # us -> English (US)
-set $keyboard_layout us
+set $keyboard_layout br 
 
+### Changes the Capslock key to Escape
+# exec_always setxkbmap -option caps:escape
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
