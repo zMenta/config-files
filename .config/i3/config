@@ -286,15 +286,16 @@ set $ws10 "10"
 ## bind program to workspace and focus to them on startup:
 assign [class="Brave"] $ws2
 assign [class="Emacs"] $ws3
-# assign [class="Thunar"] $ws4
 assign [class="Godot"] $ws4
 assign [class="Blender"] $ws5
+assign [class="krita"] $ws5
+# Obsidian and Obs studio
 assign [class="obs"] $ws6
 assign [class="discord"] $ws8
 assign [class="steam"] $ws9
 
 # automatic set focus new window if it opens on another workspace than the current:
-for_window [class=Thunar] focus
+# for_window [class=Thunar] focus
 for_window [class=Brave] focus
 for_window [class=Emacs] focus
 
