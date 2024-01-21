@@ -4,6 +4,7 @@
 -- Also refer to the after/plugin/whichkey.lua --
 -------------------------------------------------
 
+-- Note --
 -- `desc` are descriptions of the keybind. Whichkey read this value.
 
 -- Sets the leader key to space
@@ -12,6 +13,7 @@ vim.g.mapleader = " "
 -- Removes these keybinds.
 vim.keymap.set("n", "<leader>o", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
+vim.keymap.set("n", "q", "<nop>") -- Removes the default command history keybind -> 'q:' and 'q/'
 
 -- In terminal mode goes back to normal mode by pressing <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
