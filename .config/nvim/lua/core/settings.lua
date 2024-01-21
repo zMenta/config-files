@@ -21,7 +21,7 @@ vim.opt.splitright = true -- On vertical split, new window is on the right
 -- Undos
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" --So UndoTree can look up older undos and keep track of it.
+-- vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir" --So UndoTree can look up older undos and keep track of it.
 vim.opt.undofile = true
 
 -- Misc
