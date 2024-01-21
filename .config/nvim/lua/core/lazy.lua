@@ -30,21 +30,21 @@ local plugins = {
 	-- Look and Feel --
 	{"navarasu/onedark.nvim", lazy = false, priority = 1000}, -- Color theme
 	"nvim-lualine/lualine.nvim", -- Status line
-	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} },
-	"lewis6991/gitsigns.nvim",
+	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Identation level visualizer 
+	"lewis6991/gitsigns.nvim", -- Git.. signs..
 
 
 	-- Dependencies --
 	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
 
 	-- Utility & Tools --
-	{'nvim-telescope/telescope.nvim', tag = '0.1.4'},
-	'ThePrimeagen/harpoon',
-	'mbbill/undotree',
-	'NeogitOrg/neogit',
-	'numToStr/Comment.nvim',
+	{'nvim-telescope/telescope.nvim', tag = '0.1.4'}, -- Multifunctional utility, search files, grep files, etc
+	'ThePrimeagen/harpoon', -- Quickly move trough files with key shortcuts
+	'mbbill/undotree', -- Undo history in a tree
+	'NeogitOrg/neogit', -- Easily manage git, it's magit
+	'numToStr/Comment.nvim', -- Easily create comments
 	{
-	  "folke/which-key.nvim",
+	  "folke/which-key.nvim", -- Helper that shows keybinds and their commands on the fly
 	  event = "VeryLazy",
 	  init = function()
 		vim.o.timeout = true
@@ -53,7 +53,7 @@ local plugins = {
 	},
 
 	-- Treesitter -- 
-	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,},
+	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,}, -- Parsing library from a tree
 
 	-- Debugging --
 	"mfussenegger/nvim-dap",
@@ -62,8 +62,8 @@ local plugins = {
 
 	-- Completion and LSP --
 	{
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v2.x',
+	  'VonHeikemen/lsp-zero.nvim', -- Lsp Hero
+	  branch = 'v3.x',
 	  dependencies = {
 	    -- LSP Support
 	    {'neovim/nvim-lspconfig'},             -- Required
