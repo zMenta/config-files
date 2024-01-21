@@ -39,7 +39,7 @@ wk.register({
 	-- +Open --
 	["<leader>o"] = { name = "+Open" },
 	-- Explore Config Files --
-	["<leader>oc"] = { "<cmd>Ex ~/.config/nvim<cr>", "Open config files" },
+	["<leader>oc"] = { "<cmd>Oil ~/.config/nvim<cr>", "Open config files" },
 
 
 	-- +Window --

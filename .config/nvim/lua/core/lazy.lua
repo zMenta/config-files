@@ -38,7 +38,8 @@ local plugins = {
 	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
 
 	-- Utility & Tools --
-	{'nvim-telescope/telescope.nvim', tag = '0.1.4'}, -- Multifunctional utility, search files, grep files, etc
+    'stevearc/oil.nvim', -- File explorer as plain text
+	'nvim-telescope/telescope.nvim', -- Multifunctional utility, search files, grep files, etc
 	'ThePrimeagen/harpoon', -- Quickly move trough files with key shortcuts
 	'mbbill/undotree', -- Undo history in a tree
 	'NeogitOrg/neogit', -- Easily manage git, it's magit
@@ -63,7 +64,7 @@ local plugins = {
 	-- Completion and LSP --
 	{
 	  'VonHeikemen/lsp-zero.nvim', -- Lsp Hero
-	  branch = 'v3.x',
+	  branch = 'v2.x',
 	  dependencies = {
 	    -- LSP Support
 	    {'neovim/nvim-lspconfig'},             -- Required

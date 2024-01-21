@@ -17,7 +17,7 @@ vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
-vim.keymap.set("n", "<leader>e", vim.cmd.Explore, { desc = "Open Explorer" })
+vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "Open Oil Explorer" })
 
 -- Let you move the selected area up or down.
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
