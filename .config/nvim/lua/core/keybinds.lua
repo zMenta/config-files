@@ -20,8 +20,8 @@ vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 vim.keymap.set("n", "<leader>e", vim.cmd.Explore, { desc = "Open Explorer" })
 
 -- Let you move the selected area up or down.
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+-- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
+-- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 -- While moving with C-d and C-u (down or up), keeps the cursor centered.
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
