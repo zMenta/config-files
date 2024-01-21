@@ -23,6 +23,7 @@ alias grep='grep --color=auto'
 # Custom aliases #
 ##################
 alias gvim="nvim --listen ./godothost ."
+alias n="nvim"
 
 ## Neogit 
 alias gg="nvim -c Neogit" # Open Neogit
