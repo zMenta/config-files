@@ -16,3 +16,6 @@ vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = "Man Pages"})
 
 vim.keymap.set('n', '<leader>x', builtin.diagnostics, { desc = "Telescope Diagnostics" })
 vim.keymap.set('n', '<leader>t', builtin.treesitter, { desc = "Treesitter Symbols" })
+
+-- Buffer Related -- 
+vim.keymap.set('n', '<leader>bb', builtin.buffers, { desc = "Show list of buffers" })
