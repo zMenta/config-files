@@ -68,4 +68,11 @@ wk.register({
 	["<leader>bp"] = { "<cmd>bp<cr>", "Previous buffer" },
 	["<leader>bk"] = { "<cmd>bp|bd #<cr>", "Kill current buffer" },
 
+
+    -- +Text --
+	["<leader>t"] = { name = "+Text" },
+	--Basic behaviour
+	["<leader>tw"] = { "<cmd>set wrap!<cr>", "Toggle line wrap" },
+	["<leader>ts"] = { "<cmd>set spell!<cr>", "Toggle spellcheck" },
+
 })
