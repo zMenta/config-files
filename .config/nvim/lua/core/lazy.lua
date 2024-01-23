@@ -33,7 +33,6 @@ local plugins = {
 	{ "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {} }, -- Identation level visualizer 
 	"lewis6991/gitsigns.nvim", -- Git.. signs..
 
-
 	-- Dependencies --
 	'nvim-lua/plenary.nvim', -- Needed for: harpoon, telescope, neogit
 
