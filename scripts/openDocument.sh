@@ -9,6 +9,5 @@ fi
 search_result=$( fd . $dir_to_search -e pdf | rofi -dmenu -matching fuzzy -i -p "Open pdf" ) 
 
 if [ -n "$search_result" ]; then
-    # echo "'$search_result'"
     zathura "$search_result"
 fi
