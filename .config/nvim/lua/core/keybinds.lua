@@ -3,6 +3,9 @@
 -------------------------------------------------
 -- Also refer to the after/plugin/whichkey.lua --
 -------------------------------------------------
+-- Some plugin specific keybinds are also      --
+--   found on after/plugin/ path.              --
+-------------------------------------------------
 
 -- Note --
 -- `desc` are descriptions of the keybind. Whichkey read this value.
