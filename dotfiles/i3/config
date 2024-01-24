@@ -7,10 +7,10 @@
 #####################
 # br -> Portuguese (Brazil)
 # us -> English (US)
-set $keyboard_layout us 
+set $keyboard_layout br 
 
 ### Changes the Capslock key to Escape
-# exec_always setxkbmap -option caps:escape
+exec_always setxkbmap -option caps:escape
 
 
 ####################
