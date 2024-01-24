@@ -52,6 +52,9 @@ local plugins = {
 		vim.o.timeoutlen = 300
 	  end,
 	},
+    { 'windwp/nvim-autopairs', -- Intelligent autopair
+        event = "InsertEnter",
+    },
 
 	-- Treesitter -- 
 	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,}, -- Parsing library from a tree

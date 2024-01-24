@@ -52,9 +52,9 @@ vim.keymap.set("v", "<C-s>", [[y:%s/\V<C-R>"/<C-R>"/gI<Left><Left><Left>]], { de
 vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
 vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
 
--- autopairs
-vim.keymap.set("i", '"', [[""<left>]], {desc = 'Autopairs " character'})
-vim.keymap.set("i", "'", [[''<left>]], {desc = "Autopairs ' character"})
-vim.keymap.set("i", "(", "()<left>", {desc = "Autopairs ( character"})
-vim.keymap.set("i", "[", "[]<left>", {desc = "Autopairs [ character"})
-vim.keymap.set("i", "{", "{}<left>", {desc = "Autopairs { character"})
+-- crude autopairs
+-- vim.keymap.set("i", '"', [[""<left>]], {desc = 'Autopairs " character'})
+-- vim.keymap.set("i", "'", [[''<left>]], {desc = "Autopairs ' character"})
+-- vim.keymap.set("i", "(", "()<left>", {desc = "Autopairs ( character"})
+-- vim.keymap.set("i", "[", "[]<left>", {desc = "Autopairs [ character"})
+-- vim.keymap.set("i", "{", "{}<left>", {desc = "Autopairs { character"})
