@@ -18,11 +18,16 @@ vim.keymap.set("n", "<leader>o", "<nop>")
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "q", "<nop>") -- Removes the default command history keybind -> 'q:' and 'q/'
 
+-- Diagnostics
+vim.keymap.set('n', '<space>x', vim.diagnostic.open_float, { desc = "Open diagnostics"})
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Previous diagnostics"})
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostics"})
+
 -- In terminal mode goes back to normal mode by pressing <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
 -- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
-vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "Open Oil Explorer" })
+vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "Open Oil Explorer"})
 
 -- Let you move the selected area up or down.
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")

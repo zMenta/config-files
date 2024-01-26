@@ -14,7 +14,7 @@ vim.keymap.set('n', '<leader>sf', builtin.live_grep, { desc = "Grep Files"})
 vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = "Man Pages"})
 
 
-vim.keymap.set('n', '<leader>x', builtin.diagnostics, { desc = "Telescope Diagnostics" })
+vim.keymap.set('n', '<leader>X', builtin.diagnostics, { desc = "Telescope Diagnostics" })
 vim.keymap.set('n', '<leader>t', builtin.treesitter, { desc = "Treesitter Symbols" })
 
 -- Buffer Related -- 
