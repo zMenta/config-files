@@ -12,18 +12,19 @@ export PATH="$HOME/godot:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
 
 
-####################
-# Improved aliases #
-####################
+######################
+# "Improved" aliases #
+######################
 alias ls='ls -lh --color=auto'
 alias grep='grep --color=auto'
+alias n="nvim"
+alias hl="hledger"
 
 
 ##################
 # Custom aliases #
 ##################
 alias gvim="nvim --listen ./godothost ."
-alias n="nvim"
 
 ## Neogit 
 alias gg="nvim -c Neogit" # Open Neogit
