@@ -74,5 +74,6 @@ wk.register({
 	--Basic behaviour
 	["<leader>tw"] = { "<cmd>set wrap!<cr>", "Toggle line wrap" },
 	["<leader>ts"] = { "<cmd>set spell!<cr>", "Toggle spellcheck" },
+	["<leader>tr"] = { "<cmd>retab<cr>", "Retab the current buffer" },
 
 })
