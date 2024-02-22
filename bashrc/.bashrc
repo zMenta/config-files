@@ -31,7 +31,7 @@ alias gg="nvim -c Neogit" # Open Neogit
 alias gp='cd $(fd . ~/ --hidden --type d | fzf) && nvim -c Neogit'  # Go to directory and open Neogit
 
 ## Oil Explorer
-alias d="nvim -c Oil" # Open file explorer
+alias e="nvim -c Oil" # Open file explorer
 
 ## Searching and opening files / directories
 alias g='cd $(fd . ~/ --hidden --type d | fzf)' # Go to directory
