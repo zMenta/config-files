@@ -4,6 +4,7 @@ local lsp = require('lsp-zero').preset({"recommended"})
 lsp.ensure_installed({
 	"lua_ls", -- Lua
     "bashls", -- Bash
+    "rust_analyzer", -- Rust
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -45,4 +46,19 @@ lsp.setup()
 
 vim.diagnostic.config({
     virtual_text = true
+})
+
+-----------------
+-- Rust Config --
+-----------------
+require("lspconfig").rust_analyzer.setup({
+    filetypes = {"rust"},
+    root_dir = require("lspconfig/util").root_pattern("Cargo.toml"),
+    settings = {
+        ["rust-analyzer"] = {
+            cargo = {
+                allFeatures = true,
+            },
+        },
+    },
 })
