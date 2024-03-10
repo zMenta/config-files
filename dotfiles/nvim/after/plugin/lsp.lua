@@ -10,6 +10,11 @@ lsp.ensure_installed({
 lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 
+  vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr, desc = "LSP | Go to References"})
+  vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', {buffer = bufnr, desc = "LSP | Go to Implementations"})
+  vim.keymap.set('n', 'gD', '<cmd>Telescope lsp_definitions<cr>', {buffer = bufnr, desc = "LSP | Go to Definition"})
+  vim.keymap.set('n', 'gt', '<cmd>Telescope lsp_type_definitions<cr>', {buffer = bufnr, desc = "LSP | Go to Type Definition"})
+  vim.keymap.set('n', '<leader>ss', '<cmd>Telescope lsp_document_symbols<cr>', {buffer = bufnr, desc = "LSP | Document Symbols"})
 end)
 
 ----------------
