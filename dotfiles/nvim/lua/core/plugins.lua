@@ -60,9 +60,9 @@ local plugins = {
 	{'nvim-treesitter/nvim-treesitter', build = function() pcall(vim.cmd, 'TSUpdate') end,}, -- Parsing library from a tree
 
 	-- Debugging --
-	"mfussenegger/nvim-dap",
-	"theHamsta/nvim-dap-virtual-text",
-	"rcarriga/nvim-dap-ui",
+	-- "mfussenegger/nvim-dap",
+	-- "theHamsta/nvim-dap-virtual-text",
+	-- "rcarriga/nvim-dap-ui",
 
 	-- Completion and LSP --
 	{
