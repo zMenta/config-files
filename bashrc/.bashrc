@@ -11,6 +11,19 @@ export EDITOR="$VISUAL"
 export PATH="$HOME/godot:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
 
+#####################
+# Yazi file manager #
+#####################
+# Yazi wrapper -> enables to change the current working directory when exiting Yazi
+function openYazi() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+alias yy=openYazi
 
 ######################
 # "Improved" aliases #
