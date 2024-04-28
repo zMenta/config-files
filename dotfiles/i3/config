@@ -235,10 +235,10 @@ bindsym XF86AudioPrev exec playerctl previous
 # starts a terminal
 bindsym $mod+Return exec alacritty 
 # Open alacritty with zellij.
-bindsym $mod+Shift+Return exec alacritty -e zellij
+bindsym $mod+Shift+Return exec "alacritty -e bash -c 'zellij; exec bash'"
 
 # File managment
-bindsym $mod+n exec alacritty -e yazi 
+bindsym $mod+n exec ~/.scripts/openYazi.sh
 bindsym $mod+Shift+n exec thunar
 
 bindsym Print exec flameshot gui
