@@ -258,6 +258,7 @@ bindsym $mod+c exec rofi -show calc
 
 bindsym $mod+o exec ~/.scripts/openDocument.sh
 bindsym $mod+m exec ~/.scripts/downloadMusic.sh
+bindsym $mod+i exec ~/.scripts/snippets/snippet.sh
 
 ##########################################
 # configuration for workspace behaviour: #
