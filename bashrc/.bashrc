@@ -53,5 +53,8 @@ alias g='cd $(fd . ~/ --hidden --type d | fzf)' # Go to directory
 alias p='cd $(fd . ~/repos --hidden --type d | fzf) && nvim .' # (Project) Go to projects repos directory and open nvim
 alias pg='cd $(fd . ~/ --hidden --type d | fzf) && nvim .' # (Project Global) Go to home directoy and open nvim
 alias pgodot='cd $(fd . ~/ --hidden --type d | fzf) && gvim' # Go to directoy and open gvim
-alias f='nvim $(fd . ~/ --hidden --type f | fzf)' # open File with nvim
+alias f='nvim $(fd . ~/ --hidden --type f | fzf --preview="bat {1}")' # open File with nvim
 alias k='ps aux | fzf | awk "{print $2}" | xargs kill' # Kill a process
+
+## Development
+alias runc++='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run'
