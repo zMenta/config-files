@@ -57,4 +57,4 @@ alias f='nvim $(fd . ~/ --hidden --type f | fzf --preview="bat {1}")' # open Fil
 alias k='ps aux | fzf | awk "{print $2}" | xargs kill' # Kill a process
 
 ## Development
-alias runc++='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run'
+alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run'
