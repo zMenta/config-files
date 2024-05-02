@@ -4,7 +4,7 @@ local lsp = require('lsp-zero').preset({"recommended"})
 lsp.ensure_installed({
 	"lua_ls", -- Lua
     "bashls", -- Bash
-    "rust_analyzer", -- Rust
+    -- "rust_analyzer", -- Rust
 })
 
 lsp.on_attach(function(client, bufnr)
@@ -24,9 +24,10 @@ local cmp = require('cmp')
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<Tab>'] = cmp.mapping.select_next_item(cmp_select),
-  ['<Shift-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
+  ['<S-Tab>'] = cmp.mapping.select_prev_item(cmp_select),
   ['<CR>'] = cmp.mapping.confirm({ select = true }), -- <CR> = enter/return key.
-  ["<C-Space>"] = cmp.mapping.complete(),
+  ['<C-Space>'] = cmp.mapping.complete(),
+  ['<C-e>'] = cmp.mapping.abort(),
 })
 
 
