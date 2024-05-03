@@ -2,6 +2,7 @@
 -- General Settings --
 ----------------------
 
+vim.opt.colorcolumn = "100" -- Virtual column displayed on the screen 
 vim.opt.nu = true -- Line numbers
 vim.opt.relativenumber = true -- Relative line numbers
 vim.opt.wrap = false -- Line Wrap
