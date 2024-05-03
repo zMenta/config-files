@@ -42,19 +42,18 @@ alias z="zellij"
 
 ## Neogit 
 alias gg="nvim -c Neogit" # Open Neogit
-alias gp='cd $(fd . ~/repos --hidden --type d | fzf) && nvim -c Neogit'  # Go to directory and open Neogit
-alias gpg='cd $(fd . ~/ --hidden --type d | fzf) && nvim -c Neogit'  # Go to home directory and open Neogit
+alias gp='cd $(fd . ~/repos --hidden --type d | fzf --reverse) && nvim -c Neogit'  # Go to directory and open Neogit
 
 ## Oil Explorer
 alias e="nvim -c Oil" # Open file explorer
 
 ## Searching and opening files / directories
-alias g='cd $(fd . ~/ --hidden --type d | fzf)' # Go to directory
-alias p='cd $(fd . ~/repos --hidden --type d | fzf) && nvim .' # (Project) Go to projects repos directory and open nvim
-alias pg='cd $(fd . ~/ --hidden --type d | fzf) && nvim .' # (Project Global) Go to home directoy and open nvim
-alias pgodot='cd $(fd . ~/ --hidden --type d | fzf) && gvim' # Go to directoy and open gvim
-alias f='nvim $(fd . ~/ --hidden --type f | fzf --preview="bat {1}")' # open File with nvim
-alias k='ps aux | fzf | awk "{print $2}" | xargs kill' # Kill a process
+alias g='cd $(fd . ~/ --hidden --type d | fzf --reverse)' # Go to directory
+alias p='cd $(fd . ~/repos --hidden --type d | fzf --reverse ) && nvim .' # (Project) Go to projects repos directory and open nvim
+alias pg='cd $(fd . ~/ --hidden --type d | fzf --reverse) && nvim .' # (Project Global) Go to home directoy and open nvim
+alias pgodot='cd $(fd . ~/ --hidden --type d | fzf --reverse) && gvim' # Go to directoy and open gvim
+alias f='nvim $(fd . ~/ --hidden --type f | fzf --reverse --preview="bat {1}")' # open File with nvim
+alias k='ps aux | fzf --reverse | awk "{print $2}" | xargs kill' # Kill a process
 
 ## Development
 alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run' # Compiles the project to 'output', then runs it.
