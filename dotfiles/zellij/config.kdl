@@ -5,10 +5,23 @@ keybinds clear-defaults=true {
         bind "Alt p" { SwitchToMode "Pane"; }
         bind "Alt t" { SwitchToMode "Tab"; }
         bind "Alt s" { SwitchToMode "Scroll"; }
+        bind "Alt o" { SwitchToMode "Session"; }
         bind "Alt j" "Alt Down" { MoveFocus "Down"; }
         bind "Alt k" "Alt Up" { MoveFocus "Up"; }
         bind "Alt h" "Alt Left" { MoveFocusOrTab "Left"; }
         bind "Alt l" "Alt Right" { MoveFocusOrTab "Right"; }
+    }
+    session {
+        bind "Alt o" { SwitchToMode "Normal"; }
+        bind "d" { Detach; }
+        bind "q" { Quit; }
+         bind "w" {
+            LaunchOrFocusPlugin "session-manager" {
+                floating true
+                move_to_focused_tab true
+            };
+            SwitchToMode "Normal"
+        }
     }
     pane {
         bind "Alt p" { SwitchToMode "Normal"; }

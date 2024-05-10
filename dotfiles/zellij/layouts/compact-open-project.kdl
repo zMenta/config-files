@@ -1,0 +1,10 @@
+layout {
+	pane {
+        command "bash"
+        close_on_exit true
+        args "-c" "nvim .; bash"
+    }
+    pane size=1 borderless=true {
+        plugin location="zellij:compact-bar"
+    }
+}
