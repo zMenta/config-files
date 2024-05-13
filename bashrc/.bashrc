@@ -49,7 +49,8 @@ alias e="nvim -c Oil" # Open file explorer
 
 ## Searching and opening files / directories
 alias g='cd $(fd . ~/ --hidden --type d | fzf --reverse)' # Go to directory
-alias p='cd $(fd . ~/repos --hidden --type d | fzf --reverse ) && nvim .' # (Project) Go to projects repos directory and open nvim
+alias pp='cd $(fd . ~/repos --hidden --type d | fzf --reverse ) && nvim .' # (Project) Go to projects repos directory and open nvim
+alias p='~/.scripts/./openProjectZellij.sh'
 alias pg='cd $(fd . ~/ --hidden --type d | fzf --reverse) && nvim .' # (Project Global) Go to home directoy and open nvim
 alias pgodot='cd $(fd . ~/ --hidden --type d | fzf --reverse) && gvim' # Go to directoy and open gvim
 alias f='nvim $(fd . ~/ --hidden --type f | fzf --reverse --preview="bat {1}")' # open File with nvim
