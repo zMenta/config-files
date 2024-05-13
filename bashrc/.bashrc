@@ -38,7 +38,6 @@ alias hl="hledger"
 # Custom aliases #
 ##################
 alias gvim="nvim --listen ./godothost ."
-alias z="zellij"
 
 ## Neogit 
 alias gg="nvim -c Neogit" # Open Neogit
@@ -51,6 +50,7 @@ alias e="nvim -c Oil" # Open file explorer
 alias g='cd $(fd . ~/ --hidden --type d | fzf --reverse)' # Go to directory
 alias pp='cd $(fd . ~/repos --hidden --type d | fzf --reverse ) && nvim .' # (Project) Go to projects repos directory and open nvim
 alias p='~/.scripts/./openProjectZellij.sh'
+alias z="~/.scripts/./openZellijSession.sh"
 alias pg='cd $(fd . ~/ --hidden --type d | fzf --reverse) && nvim .' # (Project Global) Go to home directoy and open nvim
 alias pgodot='cd $(fd . ~/ --hidden --type d | fzf --reverse) && gvim' # Go to directoy and open gvim
 alias f='nvim $(fd . ~/ --hidden --type f | fzf --reverse --preview="bat {1}")' # open File with nvim
