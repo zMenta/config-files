@@ -1,6 +1,5 @@
 #!/bin/bash
-# Open a project with a zellij session, if the project directory and zellij session already exists,
-# attaches the already existing session.
+# Lists and open an already existing zellij session
 
 # Dependencies: zellij, fzf, fd, neovim
 
