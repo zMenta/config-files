@@ -33,8 +33,7 @@ wk.register({
 	["<leader>M"] = { "<cmd>Mason<cr>", "Open Mason" },
 
 	-- Quit Nvim --
-	["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
-
+	-- ["<leader>Q"] = { "<cmd>quitall<cr>", "Quit Nvim" },
 
 	-- +Open --
 	["<leader>o"] = { name = "+Open" },
