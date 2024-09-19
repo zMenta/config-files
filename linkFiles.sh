@@ -9,6 +9,6 @@ if [ ! -d ~/.scripts ]; then
     mkdir ~/.scripts
 fi
 
-stow dotfiles -t ~/.config --adopt
-stow scripts -t ~/.scripts --adopt
-stow bashrc -t ~/ --adopt
+stow --restow dotfiles -t ~/.config --adopt
+stow --restow scripts -t ~/.scripts --adopt
+stow --restow bashrc -t ~/ --adopt
