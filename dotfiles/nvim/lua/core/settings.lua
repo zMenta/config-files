@@ -11,7 +11,7 @@ vim.opt.wrap = false -- Line Wrap
 vim.opt.tabstop = 4 -- Size of tab character
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
-vim.opt.expandtab = true -- Changes the tab character to spaces
+-- vim.opt.expandtab = true -- Changes the tab character to spaces
 
 vim.opt.smartindent = true -- Smart Indent
 
