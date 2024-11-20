@@ -7,6 +7,7 @@
 # ########################################### #
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+export MANPAGER='nvim +Man!'
 
 export PATH="$HOME/godot:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
