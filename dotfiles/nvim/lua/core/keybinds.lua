@@ -1,11 +1,6 @@
 -------------------------------------------------
 --                  Keybinds                   --
 -------------------------------------------------
--- Also refer to the after/plugin/whichkey.lua --
--------------------------------------------------
--- Some plugin specific keybinds are also      --
---   found on after/plugin/ path.              --
--------------------------------------------------
 
 -- Note --
 -- `desc` are descriptions of the keybind. Whichkey read this value.
@@ -53,9 +48,30 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipbo
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all words under cursor"})
 vim.keymap.set("v", "<C-s>", [[y:%s/\V<C-R>"/<C-R>"/gI<Left><Left><Left>]], { desc = "Replace selected region"})
 
+-- Windows --
+vim.keymap.set("n", "<leader>ws", "<c-w>s", { desc = "Split Window" })
+vim.keymap.set("n", "<leader>wv", "<c-w>v", { desc = "Split Window Vertically" })
+vim.keymap.set("n", "<leader>wc", "<c-w>c", { desc = "Close Window" })
+--- Resizing
+vim.keymap.set("n", "<leader>wI", "<c-w>15>", { desc = "Increase Window Width Size" })
+vim.keymap.set("n", "<leader>wD", "<c-w>15<", { desc = "Increase Window Width Size" })
+vim.keymap.set("n", "<leader>wi", "<c-w>10+", { desc = "Increase Window Height Size" } )
+vim.keymap.set("n", "<leader>wd", "<c-w>10-", { desc = "Decrease Window Height Size" })
+vim.keymap.set("n", "<leader>w=", "<c-w>=", { desc = "Normalize Windows Sizes" })
+--- Cursor movement
+vim.keymap.set("n", "<leader>wl", "<c-w>l", { desc = "Move to the right window" })
+vim.keymap.set("n", "<leader>wh", "<c-w>h", { desc = "Move to the left window" })
+vim.keymap.set("n", "<leader>wj", "<c-w>j", { desc = "Move to the bottom window" })
+vim.keymap.set("n", "<leader>wk", "<c-w>k", { desc = "Move to the upper window" })
+-- Window movement
+vim.keymap.set("n", "<leader>wL", "<c-w>L", { desc = "Move window to the right window" })
+vim.keymap.set("n", "<leader>wH", "<c-w>H", { desc = "Move window to the left window" })
+vim.keymap.set("n", "<leader>wJ", "<c-w>J", { desc = "Move window to the bottom window" })
+vim.keymap.set("n", "<leader>wK", "<c-w>K", { desc = "Move window to the upper window" })
+
 -- folds
-vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
-vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
+-- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
+-- vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
 
 -- crude autopairs
 -- vim.keymap.set("i", '"', [[""<left>]], {desc = 'Autopairs " character'})
