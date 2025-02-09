@@ -9,7 +9,7 @@ return {
 		config = function()
 			require('telescope').setup {
 				defaults = {
-					-- layout_strategy = 'vertical',
+					layout_strategy = 'vertical',
 					layout_config = { height = 0.98, width = 0.98 },
 				},
 				extensions = {
