@@ -36,3 +36,8 @@ require("lazy").setup({
   checker = { enabled = false },
 })
 
+-------------
+-- Keymaps --
+-------------
+vim.keymap.set("n", "<leader>L", function() vim.cmd([[Lazy]]) end, { desc = "Open Lazy" })
+

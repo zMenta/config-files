@@ -11,6 +11,9 @@ return {
 		lazy = false,
 		config = function()
 			require("oil").setup()
+			-------------
+			-- Keymaps --
+			-------------
 			-- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
 			vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "Open Oil Explorer"})
 		end

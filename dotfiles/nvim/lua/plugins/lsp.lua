@@ -1,7 +1,15 @@
 return {
 	{
 		"williamboman/mason.nvim",
-		opts = {}
+		opts = {},
+		config = function()
+			require("mason").setup()
+			-------------
+			-- Keymaps --
+			-------------
+			vim.keymap.set("n", "<leader>M", function() vim.cmd([[Mason]]) end, { desc = "Open Mason" })
+		end
+
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
