@@ -77,9 +77,10 @@ return {
 		-- being called twice.                                                           --
 		-----------------------------------------------------------------------------------
 		config = function()
+			local capabilities = require('blink.cmp').get_lsp_capabilities() -- Code autocompletion capabilities
 			local lsp = require("lspconfig")
-			lsp.gdscript.setup {}
-			lsp.gdshader_lsp.setup {}
+			lsp.gdscript.setup { capabilities = capabilities }
+			lsp.gdshader_lsp.setup { capabilities = capabilities }
 
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
