@@ -1,6 +1,8 @@
--------------------------------------------------
---                  Keybinds                   --
--------------------------------------------------
+--------------------------------------------------------------------
+--                         Keybinds                               --
+--------------------------------------------------------------------
+-- Please refer to each plugin config for their specific keybinds --
+--------------------------------------------------------------------
 
 -- Note --
 -- `desc` are descriptions of the keybind. Whichkey read this value.
@@ -20,9 +22,6 @@ vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostics"}
 
 -- In terminal mode goes back to normal mode by pressing <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
-
--- On normal mode "n", when pressing leader + o + e. It will execute Explore command (Explore -> file explorer)
-vim.keymap.set("n", "<leader>e", vim.cmd.Oil, { desc = "Open Oil Explorer"})
 
 -- Let you move the selected area up or down.
 -- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -68,6 +67,11 @@ vim.keymap.set("n", "<leader>wL", "<c-w>L", { desc = "Move window to the right w
 vim.keymap.set("n", "<leader>wH", "<c-w>H", { desc = "Move window to the left window" })
 vim.keymap.set("n", "<leader>wJ", "<c-w>J", { desc = "Move window to the bottom window" })
 vim.keymap.set("n", "<leader>wK", "<c-w>K", { desc = "Move window to the upper window" })
+
+-- Toggles
+vim.keymap.set("n", "<leader>ts", function() vim.cmd([[set spell!]]) end, { desc = "Toggle spell check" })
+vim.keymap.set("n", "<leader>tw", function() vim.cmd([[set wrap!]]) end, { desc = "Toggle line wrap" })
+vim.keymap.set("n", "<leader>tr", function() vim.cmd([[retab]]) end, { desc = "Retab current buffer" })
 
 -- folds
 -- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all

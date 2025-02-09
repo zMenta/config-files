@@ -15,6 +15,8 @@ vim.opt.shiftwidth = 4
 
 vim.opt.smartindent = true -- Smart Indent
 
+vim.opt.linebreak = true -- On wrap set to true, wraps whole words instead of indivual characters
+
 -- Splits
 vim.opt.splitbelow = true -- On horizontal split, new window is on the bottom
 vim.opt.splitright = true -- On vertical split, new window is on the right
