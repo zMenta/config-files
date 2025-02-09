@@ -14,7 +14,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require('mason-lspconfig').setup{
+			require('mason-lspconfig').setup {
 				-- Ensure server installations
 				ensure_installed = {
 					'lua_ls',
@@ -26,7 +26,7 @@ return {
 				-- Automatic run LSP_server.setup() --
 				--------------------------------------
 				require("mason-lspconfig").setup_handlers {
-					function (server_name)
+					function(server_name)
 						require("lspconfig")[server_name].setup {}
 					end,
 
@@ -47,6 +47,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
+			{ 'nvim-telescope/telescope.nvim' },
 			{
 				--------------------------------------------
 				-- Improved lua_ls LSP support for neovim --
@@ -69,8 +70,29 @@ return {
 		-----------------------------------------------------------------------------------
 		config = function()
 			local lsp = require("lspconfig")
-			lsp.gdscript.setup{}
-			lsp.gdshader_lsp.setup{}
+			lsp.gdscript.setup {}
+			lsp.gdshader_lsp.setup {}
+
+			vim.api.nvim_create_autocmd('LspAttach', {
+				callback = function(args)
+					local c = vim.lsp.get_client_by_id(args.data.client_id)
+					if not c then return end -- Returns if no LSP is attached
+
+					-----------------------------------
+					-- Keybinds when LSP is attached --
+					-----------------------------------
+					vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format() end,
+						{ desc = "LSP | Format the current buffer" })
+					vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { desc = "LSP | Go to References" })
+					vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>',
+						{ desc = "LSP | Go to Implementations" })
+					vim.keymap.set('n', 'gD', '<cmd>Telescope lsp_definitions<cr>', { desc = "LSP | Go to Definition" })
+					vim.keymap.set('n', 'gt', '<cmd>Telescope lsp_type_definitions<cr>',
+						{ desc = "LSP | Go to Type Definition" })
+					vim.keymap.set('n', '<leader>ss', '<cmd>Telescope lsp_document_symbols<cr>',
+						{ desc = "LSP | Document Symbols" })
+				end,
+			})
 		end
 	}
 }
