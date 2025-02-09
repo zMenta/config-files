@@ -1,7 +1,7 @@
 #!/bin/bash
 # Dependencies: fd, zathura, rofi
 
-dir_to_search=~/
+dir_to_search=~/Documents/
 if [ -d "$1" ]; then
     dir_to_search=$1
 fi
