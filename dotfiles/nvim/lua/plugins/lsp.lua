@@ -13,7 +13,12 @@ return {
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+		dependencies = {
+			'saghen/blink.cmp',
+			"neovim/nvim-lspconfig",
+		},
 		config = function()
+			local capabilities = require('blink.cmp').get_lsp_capabilities() -- Code autocompletion capabilities
 			require('mason-lspconfig').setup {
 				-- Ensure server installations
 				ensure_installed = {
@@ -27,7 +32,7 @@ return {
 				--------------------------------------
 				require("mason-lspconfig").setup_handlers {
 					function(server_name)
-						require("lspconfig")[server_name].setup {}
+						require("lspconfig")[server_name].setup { capabilities = capabilities }
 					end,
 
 					-----------------------------------------
@@ -47,7 +52,10 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		dependencies = {
-			{ 'nvim-telescope/telescope.nvim' },
+			{
+				'nvim-telescope/telescope.nvim',
+				'saghen/blink.cmp'
+			},
 			{
 				--------------------------------------------
 				-- Improved lua_ls LSP support for neovim --
