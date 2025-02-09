@@ -1,1 +1,1 @@
-../../repos/config-files/dotfiles/nvim/init.lua
+require("core")
