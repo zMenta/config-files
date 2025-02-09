@@ -51,6 +51,8 @@ vim.keymap.set("v", "<C-s>", [[y:%s/\V<C-R>"/<C-R>"/gI<Left><Left><Left>]], { de
 vim.keymap.set("n", "<leader>ws", "<c-w>s", { desc = "Split Window" })
 vim.keymap.set("n", "<leader>wv", "<c-w>v", { desc = "Split Window Vertically" })
 vim.keymap.set("n", "<leader>wc", "<c-w>c", { desc = "Close Window" })
+vim.keymap.set("n", "<leader>wV", vim.cmd.vnew, { desc = "New Empty Vertical Window" })
+vim.keymap.set("n", "<leader>wS", vim.cmd.new, { desc = "New Empty Split Window" })
 --- Resizing
 vim.keymap.set("n", "<leader>wI", "<c-w>15>", { desc = "Increase Window Width Size" })
 vim.keymap.set("n", "<leader>wD", "<c-w>15<", { desc = "Increase Window Width Size" })
