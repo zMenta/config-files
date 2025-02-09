@@ -1,1 +1,0 @@
-../../../../repos/config-files/dotfiles/nvim/lua/core/plugins.lua
