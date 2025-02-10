@@ -75,6 +75,12 @@ vim.keymap.set("n", "<leader>ts", function() vim.cmd([[set spell!]]) end, { desc
 vim.keymap.set("n", "<leader>tw", function() vim.cmd([[set wrap!]]) end, { desc = "Toggle line wrap" })
 vim.keymap.set("n", "<leader>tr", function() vim.cmd([[retab]]) end, { desc = "Retab current buffer" })
 
+-- Tabs 
+vim.keymap.set("n", "<leader>Tn", function() vim.cmd([[tabnext]]) end, { desc = "Cycle to the next tab" })
+vim.keymap.set("n", "<leader>Tp", function() vim.cmd([[tabpreviou]]) end, { desc = "Cycle to the previous tab" })
+vim.keymap.set("n", "<leader>Tc", function() vim.cmd([[tabclose]]) end, { desc = "Closes the current tab" })
+vim.keymap.set("n", "<leader>TN", function() vim.cmd([[tabnew]]) end, { desc = "Create a new tab" })
+
 -- folds
 -- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
 -- vim.keymap.set("n", "zr", "zR", {desc = "Open all folds"}) -- Unfold all
