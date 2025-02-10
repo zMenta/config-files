@@ -11,9 +11,9 @@
 vim.g.mapleader = " "
 
 -- Removes these keybinds.
--- vim.keymap.set("n", "<leader>o", "<nop>")
--- vim.keymap.set("n", "Q", "<nop>")
--- vim.keymap.set("n", "q", "<nop>") -- Removes the default command history keybind -> 'q:' and 'q/'
+vim.keymap.set("i", "<C-j>", "<nop>") -- Removing to not conflict with code completion keymaps
+vim.keymap.set("i", "<C-l>", "<nop>") -- Removing to not conflict with code completion keymaps
+vim.keymap.set("i", "<C-h>", "<nop>") -- Removing to not conflict with code completion keymaps
 
 -- Diagnostics
 vim.keymap.set('n', '<space>x', vim.diagnostic.open_float, { desc = "Open diagnostics"})
