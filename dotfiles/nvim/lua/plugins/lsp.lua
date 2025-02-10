@@ -24,6 +24,7 @@ return {
 				ensure_installed = {
 					'lua_ls',
 					'bashls',
+					'marksman', -- markdown lsp
 				},
 				automatic_installation = true, -- Automatic install LSP servers if they are not installed when opening a new buffer.
 
