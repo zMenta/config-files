@@ -19,8 +19,8 @@ return {
 			-------------
 			-- Keymaps --
 			-------------
-			vim.keymap.set("n", "<space>db", dap.toggle_breakpoint, { desc = "Dap Toggle Breakpoint"} )
-			vim.keymap.set("n", "<space>gb", dap.run_to_cursor, { desc = "Dap run code until the cursor"} )
+			vim.keymap.set("n", "<space>db", dap.toggle_breakpoint, { desc = "Dap Toggle Breakpoint" })
+			vim.keymap.set("n", "<space>gb", dap.run_to_cursor, { desc = "Dap run code until the cursor" })
 
 			-- Eval var under cursor
 			vim.keymap.set("n", "<space>de", function()
@@ -52,6 +52,37 @@ return {
 					name = "Launch scene",
 					project = "${workspaceFolder}",
 					launch_scene = true,
+				}
+			}
+
+			-----------------
+			-- Bash Config --
+			-----------------
+			dap.adapters.bashdb = {
+				type = 'executable',
+				command = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/bash-debug-adapter',
+				name = 'bashdb',
+			}
+			dap.configurations.sh = {
+				{
+					type = 'bashdb',
+					request = 'launch',
+					name = "Launch file",
+					showDebugOutput = true,
+					pathBashdb = vim.fn.stdpath("data") ..
+					'/mason/packages/bash-debug-adapter/extension/bashdb_dir/bashdb',
+					pathBashdbLib = vim.fn.stdpath("data") .. '/mason/packages/bash-debug-adapter/extension/bashdb_dir',
+					trace = true,
+					file = "${file}",
+					program = "${file}",
+					cwd = '${workspaceFolder}',
+					pathCat = "cat",
+					pathBash = "/bin/bash",
+					pathMkfifo = "mkfifo",
+					pathPkill = "pkill",
+					args = {},
+					env = {},
+					terminalKind = "integrated",
 				}
 			}
 
