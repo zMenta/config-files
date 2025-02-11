@@ -20,7 +20,7 @@ return {
 			-- Keymaps --
 			-------------
 			vim.keymap.set("n", "<space>db", dap.toggle_breakpoint, { desc = "Dap Toggle Breakpoint" })
-			vim.keymap.set("n", "<space>gb", dap.run_to_cursor, { desc = "Dap run code until the cursor" })
+			vim.keymap.set("n", "<space>dc", dap.run_to_cursor, { desc = "Dap run code until the cursor" })
 
 			-- Eval var under cursor
 			vim.keymap.set("n", "<space>de", function()
@@ -102,4 +102,3 @@ return {
 		end,
 	},
 }
-
