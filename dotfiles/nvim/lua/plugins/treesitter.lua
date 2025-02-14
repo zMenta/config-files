@@ -3,7 +3,7 @@ return {
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate",
 		config = function()
-			require'nvim-treesitter.configs'.setup {
+			require 'nvim-treesitter.configs'.setup {
 				ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "gdscript", "gdshader" },
 				auto_install = true, -- Automatically install missing parsers when entering buffer
 				highlight = {
@@ -17,6 +17,11 @@ return {
 						end
 					end,
 					additional_vim_regex_highlighting = false,
+
+					-------------
+					-- Keymaps --
+					-------------
+					vim.keymap.set("n", "<leader>t", "<nop>") -- Disables this keympa (treesitter symbols) to not conflict with my keymaps
 				},
 			}
 		end
