@@ -27,6 +27,7 @@ return {
 				{ "<leader>s", group = "Search" },
 				{ "<leader>d", group = "Dap" },
 				{ "<leader>c", group = "Code" },
+				{ "<leader>gh", group = "Hunk" },
 				{ "<leader>T", group = "Tab" },
 		})
 	end
