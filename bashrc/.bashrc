@@ -38,7 +38,7 @@ alias hl="hledger"
 ##################
 # Custom aliases #
 ##################
-alias gvim="nvim --listen ./godothost ."
+alias gvim="nvim --listen ./.godothost"
 
 ## Neogit 
 alias gg="nvim -c Neogit" # Open Neogit
