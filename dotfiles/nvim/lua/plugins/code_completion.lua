@@ -31,6 +31,14 @@ return {
 				['<C-k>'] = { 'show_signature', 'hide_signature', 'fallback' },
 			},
 
+			cmdline = {
+				enabled = true,
+				keymap = { preset = 'inherit'},
+				completion = {
+					menu = { auto_show = true }
+				}
+			},
+
 			appearance = {
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = 'mono',
