@@ -4,6 +4,15 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# If shell is interactively, source ble.sh
+# using the installed path from the AUR blesh package.
+[[ $- == *i* ]] && source /usr/share/blesh/ble.sh --noattach
+
+# Enables vim motions
+if [[ $- == *i* ]]; then
+  set -o vi
+fi
+
 # ########################################### #
 export VISUAL=nvim
 export EDITOR="$VISUAL"
@@ -60,5 +69,11 @@ alias k='ps aux | fzf --reverse | awk "{print $2}" | xargs kill' # Kill a proces
 ## Development
 alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run' # Compiles the project to 'output', then runs it.
 
-## Initialize zoxide
+################
+# Tools Setups #
+################
+
+# Initialize zoxide
 eval "$(zoxide init bash)"
+# Ble.sh, more information can be found here: https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#13-set-up-bashrc
+[[ ! ${BLE_VERSION-} ]] || ble-attach
