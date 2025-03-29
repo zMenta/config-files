@@ -51,7 +51,7 @@ alias e="nvim -c Oil" # Open file explorer
 alias g='cd $(fd . ~/ --hidden --type d | fzf --reverse)' # Go to directory
 alias p='~/.scripts/./openProjectZellij.sh'
 alias pp='cd $(fd . ~/repos --hidden --type d | fzf --reverse ) && nvim .' # (Project) Go to projects repos directory and open nvim
-alias z="~/.scripts/./openZellijSession.sh"
+alias zs="~/.scripts/./openZellijSession.sh"
 alias pg='cd $(fd . ~/ --hidden --type d | fzf --reverse) && nvim .' # (Project Global) Go to home directoy and open nvim
 alias pgodot='cd $(fd . ~/ --hidden --type d | fzf --reverse) && gvim' # Go to directoy and open gvim
 alias f='nvim $(fd . ~/ --hidden --type f | fzf --reverse --preview="bat {1}")' # open File with nvim
@@ -59,3 +59,6 @@ alias k='ps aux | fzf --reverse | awk "{print $2}" | xargs kill' # Kill a proces
 
 ## Development
 alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run' # Compiles the project to 'output', then runs it.
+
+## Initialize zoxide
+eval "$(zoxide init bash)"
