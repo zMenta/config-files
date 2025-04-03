@@ -43,3 +43,6 @@ vim.opt.signcolumn = "yes" -- More space on the line number column.
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+-- Diagnostics
+vim.diagnostic.config({virtual_text = true})
