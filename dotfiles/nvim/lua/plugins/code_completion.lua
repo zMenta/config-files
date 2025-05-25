@@ -3,7 +3,7 @@ return {
 		'saghen/blink.cmp',
 		-- optional: provides snippets for the snippet source
 		dependencies = 'rafamadriz/friendly-snippets',
-		version = '*',
+		version = '1.*',
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
 		opts = {
@@ -43,13 +43,22 @@ return {
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = 'mono',
 			},
+
 			signature = { enabled = true },
+
 			completion = {
 				documentation = {
 					auto_show = true,
 					auto_show_delay_ms = 200,
 				}
-			}
+			},
+
+			sources = {
+				default = { 'lsp', 'path', 'snippets', 'buffer' },
+			},
+
+			fuzzy = { implementation = "prefer_rust_with_warning" },
 		},
+		opts_extend = { "sources.default" }
 	}
 }

@@ -1,0 +1,33 @@
+{
+	"Typed Function": {
+		"prefix": "fu",
+		"body": [
+			"func ${1:name}($2) -> ${3:void}:",
+			"\t${4:pass}"
+		]
+	},
+
+	"Onready variable": {
+		"prefix": "on",
+		"body": [
+			"@onready var ${1:name}: ${2:type} = ${3:reference}"
+		]
+	},
+
+	"Export variable": {
+		"prefix": "ex",
+		"body": [
+			"@export var ${1:name}: ${2:type} = ${3:default_value}"
+		]
+	},
+
+	"Connect and create function": {
+		"prefix": "con",
+		"body": [
+			"connect(_on_${1:callable})",
+			"",
+			"func _on_${1:callable}() -> void:",
+			"\t${2:pass}"
+		]
+	}
+}
