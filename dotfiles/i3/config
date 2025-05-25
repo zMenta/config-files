@@ -289,6 +289,7 @@ set $ws10 "10:十"
 
 ## bind program to workspace and focus to them on startup:
 assign [class="Brave"] $ws2
+assign [class="zen"] $ws2
 assign [class="firefox"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Godot"] $ws4
