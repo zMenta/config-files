@@ -1,0 +1,22 @@
+{
+	"Godot project directory template": {
+		"prefix": "go",
+		"body": [
+			"assets/fonts/",
+			"assets/hdris/",
+			"assets/models/",
+			"assets/sounds/ambience/",
+			"assets/sounds/music/",
+			"assets/sounds/sfx/",
+			"assets/sprites/particles/",
+			"assets/sprites/ui/",
+			"assets/sprites/textures/",
+			"resources/materials/",
+			"resources/shaders/",
+			"scenes/ui/",
+			"scripts/autoloaders/",
+			"scripts/resources/",
+			"scripts/classes/"
+		]
+	}
+}
