@@ -16,6 +16,7 @@ return {
 		dependencies = {
 			'saghen/blink.cmp',
 			"neovim/nvim-lspconfig",
+			"Hoffs/omnisharp-extended-lsp.nvim"
 		},
 		config = function()
 			local capabilities = require('blink.cmp').get_lsp_capabilities() -- Code autocompletion capabilities
@@ -39,6 +40,22 @@ return {
 					-----------------------------------------
 					-- Individual LSP server configuration --
 					-----------------------------------------
+					-- C# Omnisharp --
+					["omnisharp"] = function ()
+						require("lspconfig").omnisharp.setup({
+							handlers = {
+								["textDocument/definition"] = require("omnisharp_extended").handler,
+							},
+							capabilities = capabilities,
+							cmd = { vim.fn.stdpath("data") .. "/mason/packages/omnisharp/OmniSharp" },
+							enable_editorconfig_support = true,
+							enable_roslyn_analyzers = true,
+							organize_imports_on_format = true,
+							enable_import_completion = true,
+							sdk_include_prereleases = true,
+							analyze_open_documents_only = true,
+						})
+					end
 					-- please read :h mason-lspconfig-automatic-server-setup for more details --
 
 					-- Next, you can provide a dedicated handler for specific servers.
@@ -80,17 +97,20 @@ return {
 		config = function()
 			local capabilities = require('blink.cmp').get_lsp_capabilities() -- Code autocompletion capabilities
 			local lsp = require("lspconfig")
+			--------------
+			-- Gdscript --
+			--------------
 			lsp.gdscript.setup { capabilities = capabilities }
 			lsp.gdshader_lsp.setup { capabilities = capabilities }
 
+			-----------------------------------
+			-- Keybinds when LSP is attached --
+			-----------------------------------
 			vim.api.nvim_create_autocmd('LspAttach', {
 				callback = function(args)
 					local c = vim.lsp.get_client_by_id(args.data.client_id)
 					if not c then return end -- Returns if no LSP is attached
 
-					-----------------------------------
-					-- Keybinds when LSP is attached --
-					-----------------------------------
 					vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format() end,
 						{ desc = "LSP | Format the current buffer" })
 					vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { desc = "LSP | Go to References" })
