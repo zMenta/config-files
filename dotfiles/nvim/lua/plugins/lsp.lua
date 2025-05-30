@@ -32,6 +32,7 @@ return {
 				--------------------------------------
 				-- Automatic run LSP_server.setup() --
 				--------------------------------------
+				-- please read :h mason-lspconfig-automatic-server-setup for more details --
 				require("mason-lspconfig").setup_handlers {
 					function(server_name)
 						require("lspconfig")[server_name].setup { capabilities = capabilities }
@@ -56,13 +57,6 @@ return {
 							analyze_open_documents_only = true,
 						})
 					end
-					-- please read :h mason-lspconfig-automatic-server-setup for more details --
-
-					-- Next, you can provide a dedicated handler for specific servers.
-					-- For example, a handler override for the `rust_analyzer`:
-					-- ["rust_analyzer"] = function ()
-					-- 	require("rust-tools").setup {}
-					-- end
 				}
 			}
 		end
