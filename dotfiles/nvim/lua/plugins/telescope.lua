@@ -38,6 +38,9 @@ return {
 
 			-- Buffer Related --
 			vim.keymap.set('n', '<leader>b', builtin.buffers, { desc = "Show list of buffers" })
+
+			-- Removing these keybinds
+			vim.keymap.set("n", "<leader>t", "<nop>") -- Removing to not conflict with Whichkey "Toggle" section
 		end
 	}
 }

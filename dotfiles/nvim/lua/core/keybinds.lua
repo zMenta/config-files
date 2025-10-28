@@ -1,7 +1,8 @@
 --------------------------------------------------------------------
 --                         Keybinds                               --
 --------------------------------------------------------------------
--- Please refer to each plugin config for their specific keybinds --
+-- Please refer to each plugin config for their specific keybinds, --
+-- this section is meant for "vanilla" keybinds.                  --
 --------------------------------------------------------------------
 
 -- Note --
@@ -45,7 +46,9 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipbo
 
 -- Substitute all words on selected by the cursor.
 vim.keymap.set("n", "<C-s>", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Replace all words under cursor"})
+vim.keymap.set("n", "<C-S-s>", [[:%s/\<<C-r><C-w>\>//gI<Left><Left><Left>]], { desc = "Replace all words under cursor with a new word"})
 vim.keymap.set("v", "<C-s>", [[y:%s/\V<C-R>"/<C-R>"/gI<Left><Left><Left>]], { desc = "Replace selected region"})
+vim.keymap.set("v", "<C-S-s>", [[y:%s/\V<C-R>"//gI<Left><Left><Left>]], { desc = "Replace selected region with a new word"})
 
 -- Windows --
 vim.keymap.set("n", "<leader>ws", "<c-w>s", { desc = "Split Window" })
