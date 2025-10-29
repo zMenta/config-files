@@ -13,9 +13,10 @@ if [ -n "$music_url" ]; then
             notify-send -u critical "Error" "Unable to create directory $download_path"
         fi
     fi
-    if yt-dlp -x -f bestaudio --embed-thumbnail --add-metadata -P $download_path $music_url ; then
-        notify-send -u normal "Music Downloaded" "$music_url"
+	if error_message=$(yt-dlp -x -f bestaudio --embed-thumbnail --add-metadata -P $download_path $music_url 2>&1) ; then
+        notify-send -u normal "$music_url" "Audio downloaded and saved on $download_path"
     else
-        notify-send -u critical "Failed to download music" "$music_url"
+		message=$( echo "$error_message" | tail -n 1 )
+        notify-send -u critical "Failed to download music" "$message" 
     fi
 fi
