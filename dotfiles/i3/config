@@ -297,6 +297,7 @@ assign [class="Blender"] $ws5
 assign [class="krita"] $ws5
 # Obsidian and Obs studio
 assign [class="obs"] $ws6
+assign [class="betterbird"] $ws7
 assign [class="discord"] $ws8
 assign [class="steam"] $ws9
 
