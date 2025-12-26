@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard version="1">
+    <commands>
+        <key command="PaletteEditor" shortcut="A" removed="true"/>
+    </commands>
+    <tools/>
+    <quicktools/>
+    <actions/>
+    <wheel/>
+    <drag>
+        <key action="BrushSize" vector="4,0" shortcut="Ctrl+Alt" removed="true"/>
+        <key action="BrushSize" vector="4,0" shortcut="A"/>
+    </drag>
+</keyboard>
