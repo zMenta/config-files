@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<keyboard version="1">
+    <commands>
+        <key command="Fill" shortcut="F" removed="true"/>
+        <key command="PaletteEditor" shortcut="A" removed="true"/>
+        <key command="SetInkType" shortcut="Shift+F" removed="true">
+            <param name="type" value="simple"/>
+        </key>
+        <key command="SetInkType" shortcut="F">
+            <param name="type" value="simple"/>
+        </key>
+        <key command="SetInkType" shortcut="Shift+F">
+            <param name="type" value="shading"/>
+        </key>
+    </commands>
+    <tools/>
+    <quicktools/>
+    <actions/>
+    <wheel/>
+    <drag>
+        <key action="BrushSize" vector="4,0" shortcut="Ctrl+Alt" removed="true"/>
+        <key action="BrushSize" vector="4,0" shortcut="A"/>
+    </drag>
+</keyboard>
