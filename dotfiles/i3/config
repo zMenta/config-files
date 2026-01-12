@@ -279,16 +279,29 @@ set $ws10 "10:十"
 #workspace $ws4 output HDMI-0
 #workspace $ws5 output HDMI-0
 
+
+#################################
+# Setup workspace app shortcuts #
+#################################
+
+bindsym $mod+Ctrl+1 workspace $ws1; exec alacritty
+bindsym $mod+Ctrl+2 workspace $ws2; exec zen-browser
+
+bindsym $mod+Ctrl+4 workspace $ws4; exec godot
+bindsym $mod+Ctrl+5 workspace $ws5; exec blender
+bindsym $mod+Ctrl+6 workspace $ws6; exec krita
+bindsym $mod+Ctrl+7 workspace $ws7; exec obs
+bindsym $mod+Ctrl+8 workspace $ws8; exec discord
+
 ## bind program to workspace and focus to them on startup:
-assign [class="Brave"] $ws2
 assign [class="zen"] $ws2
 assign [class="firefox"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Godot"] $ws4
 assign [class="Blender"] $ws5
-assign [class="krita"] $ws5
+assign [class="krita"] $ws6
 # Obsidian and Obs studio
-assign [class="obs"] $ws6
+assign [class="obs"] $ws7
 assign [class="betterbird"] $ws7
 assign [class="discord"] $ws8
 assign [class="steam"] $ws9
