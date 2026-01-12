@@ -366,9 +366,16 @@ set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 
+## Gruvbox Colors
+set $grey1 #928374
+set $background #1D2021
+set $background-alt #282828
+set $foreground #DDC7a1
+set $disabled #504945
+
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
-client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
-client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
+client.focused		    	$grey1	$background-alt	$white		$grey1	$grey1
+client.unfocused	    	$disabled	$background	$grey		$darkgrey	$darkgrey
+client.focused_inactive		$disabled	$background	$grey		$black		$black
 client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
