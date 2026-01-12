@@ -9,9 +9,6 @@
 # us -> English (US)
 set $keyboard_layout us 
 
-### Changes the Capslock key to Escape
-exec_always setxkbmap -option caps:escape
-
 
 ####################
 # General Settings #
@@ -310,10 +307,14 @@ for_window [class=Emacs] focus
 # Sets keyboard layout
 exec_always setxkbmap $keyboard_layout
 
-# Autostart apps as you like
-# Examples:
-#exec --no-startup-id sleep 2 && xfce4-terminal
-#exec --no-startup-id sleep 3 && thunar
+# Changes the Capslock key to Escape
+exec_always setxkbmap -option caps:escape
+
+# Automatically aranges the tiles of windows
+exec_always autotiling
+
+# Statusbar / Polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # start a script to setup displays
 # uncomment the next line, use arandr to setup displays and save the file as monitor:
@@ -371,9 +372,3 @@ client.focused		    	$lightblue	$darkblue	$white		$mediumgrey	$mediumgrey
 client.unfocused	    	$darkblue	$darkblue	$grey		$darkgrey	$darkgrey
 client.focused_inactive		$darkblue	$darkblue	$grey		$black		$black
 client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
-
-################
-# bar settings #
-################
-
-exec_always --no-startup-id ~/.config/polybar/launch.sh
