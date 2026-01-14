@@ -286,7 +286,7 @@ set $ws10 "10:十"
 
 bindsym $mod+Ctrl+1 workspace $ws1; exec alacritty
 bindsym $mod+Ctrl+2 workspace $ws2; exec zen-browser
-
+bindsym $mod+Ctrl+3 workspace $ws3; exec "alacritty -e bash -c '~/.scripts/./openProjectZellij.sh;exec bash'"
 bindsym $mod+Ctrl+4 workspace $ws4; exec godot
 bindsym $mod+Ctrl+5 workspace $ws5; exec blender
 bindsym $mod+Ctrl+6 workspace $ws6; exec krita
