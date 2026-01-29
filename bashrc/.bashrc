@@ -16,7 +16,9 @@ fi
 # ########################################### #
 export VISUAL=nvim
 export EDITOR="$VISUAL"
-export MANPAGER='nvim +Man!'
+# export MANPAGER='nvim +Man!'
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANROFFOPT="-c"
 
 export PATH="$HOME/godot:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
