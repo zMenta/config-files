@@ -15,11 +15,10 @@ notify() {
 }
 
 if (( $currentCharge >= $highLevel )) && [ $currentStatus == "Charging" ]; then
-	notify "normal" "Battery is above $highLevel%"
+	notify normal "Battery is above $highLevel%"
 elif (( $currentCharge <= $lowLevel )) && [ $currentStatus == "Discharging" ]; then
-	notify urgent "Low Battery!"
+	notify critical "Battery is below $lowLevel%"
 elif [ -e $tempFile ]; then
-	echo "removing temp file"
 	rm $tempFile
 fi
 
