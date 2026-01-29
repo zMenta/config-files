@@ -40,6 +40,11 @@ function openYazi() {
 }
 alias yy=openYazi
 
+###########
+# Utility #
+###########
+alias weather='function weather() { curl wttr.in/$1; }; weather'
+
 ######################
 # "Improved" aliases #
 ######################
