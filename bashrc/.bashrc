@@ -26,25 +26,6 @@ export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
-#####################
-# Yazi file manager #
-#####################
-# Yazi wrapper -> enables to change the current working directory when exiting Yazi
-function openYazi() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
-	yazi "$@" --cwd-file="$tmp"
-	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
-		cd -- "$cwd"
-	fi
-	rm -f -- "$tmp"
-}
-alias yy=openYazi
-
-###########
-# Utility #
-###########
-alias weather='function weather() { curl wttr.in/$1; }; weather'
-
 ######################
 # "Improved" aliases #
 ######################
@@ -53,10 +34,11 @@ alias grep='grep --color=auto'
 alias n="nvim"
 alias hl="hledger"
 
-
 ##################
 # Custom aliases #
 ##################
+alias weather='function weather() { curl wttr.in/$1; }; weather'
+
 alias gvim="nvim --listen ./.godothost"
 
 ## Neogit 
@@ -82,8 +64,20 @@ alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; co
 ################
 # Tools Setups #
 ################
-
 # Initialize zoxide
 eval "$(zoxide init bash)"
+
 # Ble.sh, more information can be found here: https://github.com/akinomyoga/ble.sh?tab=readme-ov-file#13-set-up-bashrc
 [[ ! ${BLE_VERSION-} ]] || ble-attach
+
+# Yazi file manager #
+# Yazi wrapper -> enables to change the current working directory when exiting Yazi
+function openYazi() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+alias yy=openYazi
