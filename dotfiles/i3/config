@@ -296,6 +296,7 @@ bindsym $mod+Ctrl+8 workspace $ws8; exec discord
 ## bind program to workspace and focus to them on startup:
 assign [class="zen"] $ws2
 assign [class="firefox"] $ws2
+assign [class="qutebrowser"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Godot"] $ws4
 assign [class="Blender"] $ws5
