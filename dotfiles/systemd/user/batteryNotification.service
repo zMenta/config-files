@@ -1,0 +1,6 @@
+[Unit]
+Description=Notify battery levels
+
+[Service]
+Type=oneshot
+ExecStart=%h/.scripts/batteryNotification.sh

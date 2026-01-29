@@ -1,0 +1,10 @@
+[Unit]
+Description=Notify battery levels
+
+[Timer]
+AccuracySec=1sec
+OnStartupSec=30sec
+OnUnitActiveSec=1min
+
+[Install]
+WantedBy=timers.target
