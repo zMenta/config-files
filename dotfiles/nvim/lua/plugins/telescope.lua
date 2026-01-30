@@ -23,6 +23,7 @@ return {
 			-- Find Related --
 			vim.keymap.set('n', '<leader><leader>', builtin.git_files, { desc = "Find files in current git project" })
 			vim.keymap.set('n', '<leader>f', builtin.find_files, { desc = "Find File" })
+			vim.keymap.set('n', '<leader>F', function () vim.cmd([[Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍]]) end, { desc = "Find File +Hidden" })
 
 			-- Search Related --
 			vim.keymap.set('n', '<leader>sc', builtin.commands, { desc = "Commands" })
