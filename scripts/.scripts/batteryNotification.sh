@@ -4,6 +4,7 @@ battery="BAT0"
 lowLevel=25
 highLevel=80
 currentCharge=`cat /sys/class/power_supply/${battery}/capacity`
+currentStatus=`cat /sys/class/power_supply/${battery}/status`
 tempFile=~/.config/systemd/tempfiles/tempBatteryFile
 
 notify() {
@@ -13,9 +14,9 @@ notify() {
 	fi
 }
 
-if (( $currentCharge >= $highLevel )); then
+if (( $currentCharge >= $highLevel )) && [ $currentStatus == "Charging" ]; then
 	notify normal "Battery is above $highLevel%"
-elif (( $currentCharge <= $lowLevel )); then
+elif (( $currentCharge <= $lowLevel )) && [ $currentStatus == "Discharging" ]; then
 	notify critical "Battery is below $lowLevel%"
 elif [ -e $tempFile ]; then
 	rm $tempFile
