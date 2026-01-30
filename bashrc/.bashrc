@@ -21,6 +21,7 @@ export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANROFFOPT="-c"
 
 export PATH="$HOME/godot:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
 export LEDGER_FILE="$HOME/.ledger/.hledger.journal"
 
 export GTK_IM_MODULE='fcitx'
