@@ -28,19 +28,16 @@ export QT_IM_MODULE='fcitx'
 export SDL_IM_MODULE='fcitx'
 export XMODIFIERS='@im=fcitx'
 
-######################
-# "Improved" aliases #
-######################
+##################
+# Custom aliases #
+##################
+
 alias ls='ls -lh --color=auto'
 alias grep='grep --color=auto'
 alias n="nvim"
 alias hl="hledger"
 
-##################
-# Custom aliases #
-##################
-alias weather='function weather() { curl wttr.in/$1; }; weather'
-
+# Godot
 alias gvim="nvim --listen ./.godothost"
 
 ## Neogit 
@@ -60,8 +57,11 @@ alias pgodot='cd $(fd . ~/ --hidden --type d | fzf --reverse) && gvim' # Go to d
 alias f='nvim $(fd . ~/ --hidden --type f | fzf --reverse --preview="bat {1}")' # open File with nvim
 alias k='ps aux | fzf --reverse | awk "{print $2}" | xargs kill' # Kill a process
 
-## Development
-alias runcpp='function compile_and_run() { g++ -o output "$1" && ./output; }; compile_and_run' # Compiles the project to 'output', then runs it.
+#############
+# Functions #
+#############
+function runcpp() { g++ -o output $1 && ./output; } # Compiles the project to 'output', then runs it.
+function weather() { curl wttr.in/$1; }
 
 ################
 # Tools Setups #
