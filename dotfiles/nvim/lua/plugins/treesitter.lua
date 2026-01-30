@@ -1,29 +1,31 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function()
-			require 'nvim-treesitter.configs'.setup {
-				ensure_installed = { "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline", "gdscript", "gdshader" },
-				auto_install = true, -- Automatically install missing parsers when entering buffer
-				highlight = {
-					enable = true,
-					-- Function to disable slow treesitter highlight for large files. TLDR: Disable treesitter highlight in large files
-					disable = function(lang, buf)
-						local max_filesize = 100 * 1024 -- 100 KB
-						local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-						if ok and stats and stats.size > max_filesize then
-							return true
-						end
-					end,
-					additional_vim_regex_highlighting = false,
+	'nvim-treesitter/nvim-treesitter',
+	lazy = false,
+	build = ':TSUpdate',
+	config = function ()
+		local parsers = { "bash", "lua", "gdscript", "gdshader", "markdown", "markdown_inline", "python"}
+		local treesitter = require("nvim-treesitter")
 
-					-------------
-					-- Keymaps --
-					-------------
-					vim.keymap.set("n", "<leader>t", "<nop>") -- Disables this keympa (treesitter symbols) to not conflict with my keymaps
-				},
-			}
-		end
-	}
+		treesitter.install(parsers)
+
+		-- Indentations
+		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+
+		-- Folds
+		vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+		vim.wo[0][0].foldmethod = 'expr'
+		-- Make the file unfolded as default
+		vim.api.nvim_command("set nofoldenable")
+
+		-- Highlight
+		vim.api.nvim_create_autocmd('FileType', {
+			pattern = parsers,
+			callback = function() vim.treesitter.start() end,
+		})
+
+		-------------
+		-- Keymaps --
+		-------------
+		vim.keymap.set("n", "<leader>t", "<nop>") -- Disables this keympap (treesitter symbols) to not conflict with my keymaps
+	end
 }
