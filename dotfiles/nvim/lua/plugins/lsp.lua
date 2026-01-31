@@ -61,16 +61,17 @@ return {
 				callback = function(args)
 					local client = vim.lsp.get_client_by_id(args.data.client_id)
 					if not client then return end -- Returns if no LSP is attached
+					local builtin = require('telescope.builtin')
 
 					-----------------------------------
 					-- Keybinds when LSP is attached --
 					-----------------------------------
 					vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format() end, { desc = "LSP | Format the current buffer" })
-					vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', { desc = "LSP | Go to References" })
-					vim.keymap.set('n', 'gi', '<cmd>Telescope lsp_implementations<cr>', { desc = "LSP | Go to Implementations" })
-					vim.keymap.set('n', 'gD', '<cmd>Telescope lsp_definitions<cr>', { desc = "LSP | Go to Definition" })
-					vim.keymap.set('n', 'gt', '<cmd>Telescope lsp_type_definitions<cr>', { desc = "LSP | Go to Type Definition" })
-					vim.keymap.set('n', '<leader>ss', '<cmd>Telescope lsp_document_symbols<cr>', { desc = "LSP | Document Symbols" })
+					vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = "LSP | Document Symbols" })
+					vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "LSP | Go to References" })
+					vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = "LSP | Go to Implementations" })
+					vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "LSP | Go to Definition" })
+					vim.keymap.set('n', 'gt', builtin.lsp_type_definitions , { desc = "LSP | Go to Type Definition" })
 				end,
 			})
 		end

@@ -36,12 +36,14 @@ return {
 			vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = "Keymaps" })
 			vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = "Grep Current Buffer" })
 			vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = "Man Pages" })
+			vim.keymap.set('n', '<leader>sr', builtin.registers, { desc = "Registers" })
+
+			-- LSP Pickers --
+			-- Check LSP config for other keybinds --
+			vim.keymap.set('n', '<leader>X', builtin.diagnostics, { desc = "Telescope Diagnostics" })
 
 			-- Treesitter Picker --
 			vim.keymap.set('n', '<leader>st', builtin.treesitter, { desc = "Treesitter Symbols" })
-
-			-- LSP Pickers --
-			vim.keymap.set('n', '<leader>X', builtin.diagnostics, { desc = "Telescope Diagnostics" })
 		end
 	}
 }
