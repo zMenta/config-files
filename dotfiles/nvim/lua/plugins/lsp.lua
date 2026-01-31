@@ -1,6 +1,6 @@
 return {
 	{
-		"williamboman/mason.nvim",
+		"mason-org/mason.nvim",
 		opts = {},
 		config = function()
 			require("mason").setup()
@@ -12,41 +12,19 @@ return {
 
 	},
 	{
-		"williamboman/mason-lspconfig.nvim",
+		"mason-org/mason-lspconfig.nvim",
 		dependencies = {
-			'saghen/blink.cmp',
 			"neovim/nvim-lspconfig",
+			{ "mason-org/mason.nvim", opts = {} }
 		},
 		config = function()
-			local capabilities = require('blink.cmp').get_lsp_capabilities() -- Code autocompletion capabilities
 			require('mason-lspconfig').setup {
-				-- Ensure server installations
 				ensure_installed = {
-					'lua_ls',
-					'bashls',
+					'lua_ls', -- Lua
+					'bashls', -- Bash
 					'marksman', -- markdown lsp
 				},
-				automatic_installation = true, -- Automatic install LSP servers if they are not installed when opening a new buffer.
-
-				--------------------------------------
-				-- Automatic run LSP_server.setup() --
-				--------------------------------------
-				require("mason-lspconfig").setup_handlers {
-					function(server_name)
-						require("lspconfig")[server_name].setup { capabilities = capabilities }
-					end,
-
-					-----------------------------------------
-					-- Individual LSP server configuration --
-					-----------------------------------------
-					-- please read :h mason-lspconfig-automatic-server-setup for more details --
-
-					-- Next, you can provide a dedicated handler for specific servers.
-					-- For example, a handler override for the `rust_analyzer`:
-					-- ["rust_analyzer"] = function ()
-					-- 	require("rust-tools").setup {}
-					-- end
-				}
+				automatic_enabled = true, -- Automatic run vim.lsp.enable() for the servers installed with Mason
 			}
 		end
 	},
