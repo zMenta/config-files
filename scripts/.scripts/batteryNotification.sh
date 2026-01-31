@@ -9,7 +9,7 @@ tempFile=~/.config/systemd/tempfiles/tempBatteryFile
 
 notify() {
 	if [ ! -e $tempFile ]; then
-		notify-send --urgency "$1" "󰂃 Battery" "$2" --expire-time 15000
+		notify-send --urgency "$1" "󰂃 Battery" "$2" --expire-time 0
 		touch $tempFile
 	fi
 }
