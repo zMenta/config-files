@@ -68,11 +68,6 @@ return {
 			-- 	end
 			--
 			-- })
-
-			-------------
-			-- Keymaps --
-			-------------
-			vim.keymap.set("n", "<leader>t", "<nop>") -- Disables this keympap (treesitter symbols) to not conflict with my keymaps
 		end
 
 	},
