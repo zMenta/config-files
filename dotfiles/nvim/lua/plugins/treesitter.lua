@@ -20,6 +20,8 @@ return {
 				"comment",
 				"ledger",
 				"csv",
+				"html",
+				"yaml",
 				-- Treesitter recommended parsers
 				"lua",
 				"c",
