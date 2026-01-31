@@ -8,17 +8,25 @@ return {
 		},
 		config = function()
 			require('telescope').setup {
+				-- Values copied from telescope.themes.get_ivy() configuration
 				defaults = {
-					layout_strategy = 'vertical',
-					layout_config = { height = 0.98, width = 0.98 },
+					sorting_strategy = "ascending",
+					layout_strategy = "bottom_pane",
+					layout_config = {
+						height = 0.75,
+					},
+					border = true,
+					borderchars = {
+						prompt = { "─", " ", " ", " ", "─", "─", " ", " " },
+						results = { " " },
+						preview = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
+					},
 				},
 				extensions = {
 					fzf = {}
 				}
 			}
 			require('telescope').load_extension('fzf')
-			-- require('telescope.themes').get_ivy()
-			require('telescope.themes').get_cursor()
 			local builtin = require('telescope.builtin')
 
 			-- File Pickers --
