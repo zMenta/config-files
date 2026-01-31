@@ -3,7 +3,20 @@ return {
 	lazy = false,
 	build = ':TSUpdate',
 	config = function ()
-		local parsers = { "bash", "lua", "gdscript", "gdshader", "markdown", "markdown_inline", "python"}
+		local parsers = {
+			"bash",
+			"gdscript",
+			"gdshader",
+			"markdown",
+			"markdown_inline",
+			"python",
+			-- Treesitter recommended parsers
+			"lua",
+			"c",
+			"vim",
+			"vimdoc",
+			"query"
+		}
 		local treesitter = require("nvim-treesitter")
 
 		treesitter.install(parsers)
