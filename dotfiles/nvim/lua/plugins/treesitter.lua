@@ -8,19 +8,32 @@ return {
 
 		treesitter.install(parsers)
 
-		-- Indentations
+		-- Enable Treesitter Indentations
 		vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
 
-		-- Folds
+		-- Enable Treesitter Folds
 		vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
 		vim.wo[0][0].foldmethod = 'expr'
 		-- Make the file unfolded as default
 		vim.api.nvim_command("set nofoldenable")
 
-		-- Highlight
+		-- Clunky implementation of autoinstall of parsers
+		-- and enable Treesitter highlight
 		vim.api.nvim_create_autocmd('FileType', {
-			pattern = parsers,
-			callback = function() vim.treesitter.start() end,
+			callback = function (args)
+				local filetype = args.match
+
+				-- you need some mechanism to avoid running on buffers that do not
+				-- correspond to a language (like oil.nvim buffers), this implementation
+				-- checks if a parser exists for the current language
+				local language = vim.treesitter.language.get_lang(filetype) or filetype
+				if not vim.treesitter.language.add(language) then
+					return
+				end
+
+				treesitter.install(filetype)
+				vim.treesitter.start()
+			end
 		})
 
 		-------------
