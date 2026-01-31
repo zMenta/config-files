@@ -8,9 +8,18 @@ return {
 				"bash",
 				"gdscript",
 				"gdshader",
+				"godot_resource",
 				"markdown",
 				"markdown_inline",
 				"python",
+				"regex",
+				"diff",
+				"gitcommit",
+				"git_rebase",
+				"gitignore",
+				"comment",
+				"ledger",
+				"csv",
 				-- Treesitter recommended parsers
 				"lua",
 				"c",
@@ -31,24 +40,32 @@ return {
 			-- Make the file unfolded as default
 			vim.api.nvim_command("set nofoldenable")
 
-			-- Clunky implementation of autoinstall of parsers
-			-- and enable Treesitter highlight
+			-- Enable highlight
 			vim.api.nvim_create_autocmd('FileType', {
-				callback = function (args)
-					local filetype = args.match
-
-					-- you need some mechanism to avoid running on buffers that do not
-					-- correspond to a language (like oil.nvim buffers), this implementation
-					-- checks if a parser exists for the current language
-					local language = vim.treesitter.language.get_lang(filetype) or filetype
-					if not vim.treesitter.language.add(language) then
-						return
-					end
-
-					treesitter.install(filetype)
-					vim.treesitter.start()
-				end
+				pattern = parsers,
+				callback = function() vim.treesitter.start() end,
 			})
+
+			-- -- Clunky implementation of autoinstall of parsers
+			-- -- and enable Treesitter highlight
+			-- -- Removing it since it didn't worked as expected --
+			-- vim.api.nvim_create_autocmd('FileType', {
+			-- 	callback = function (args)
+			-- 		local filetype = args.match
+			--
+			-- 		-- you need some mechanism to avoid running on buffers that do not
+			-- 		-- correspond to a language (like oil.nvim buffers), this implementation
+			-- 		-- checks if a parser exists for the current language
+			-- 		local language = vim.treesitter.language.get_lang(filetype) or filetype
+			-- 		if not vim.treesitter.language.add(language) then
+			-- 			return
+			-- 		end
+			--
+			-- 		treesitter.install(filetype)
+			-- 		vim.treesitter.start()
+			-- 	end
+			--
+			-- })
 
 			-------------
 			-- Keymaps --
