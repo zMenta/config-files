@@ -13,7 +13,7 @@ return {
 					sorting_strategy = "ascending",
 					layout_strategy = "bottom_pane",
 					layout_config = {
-						height = 0.75,
+						height = 0.72,
 					},
 					border = true,
 					borderchars = {
