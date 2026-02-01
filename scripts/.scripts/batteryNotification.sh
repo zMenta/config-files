@@ -1,8 +1,8 @@
 #!/bin/bash
 
 battery="BAT0"
-lowLevel=25
-highLevel=80
+lowLevel=20
+highLevel=85
 currentCharge=`cat /sys/class/power_supply/${battery}/capacity`
 currentStatus=`cat /sys/class/power_supply/${battery}/status`
 tempFile=~/.config/systemd/tempfiles/tempBatteryFile
