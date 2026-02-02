@@ -22,6 +22,7 @@ return {
 				"csv",
 				"html",
 				"yaml",
+				"toml",
 				-- Treesitter recommended parsers
 				"lua",
 				"c",
