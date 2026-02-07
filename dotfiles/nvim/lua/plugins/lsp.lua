@@ -67,11 +67,11 @@ return {
 					-- Keybinds when LSP is attached --
 					-----------------------------------
 					vim.keymap.set("n", "<leader>cf", function() vim.lsp.buf.format() end, { desc = "LSP | Format the current buffer" })
-					vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = "LSP | Document Symbols" })
-					vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = "LSP | Go to References" })
-					vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = "LSP | Go to Implementations" })
-					vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "LSP | Go to Definition" })
-					vim.keymap.set('n', 'gt', builtin.lsp_type_definitions , { desc = "LSP | Go to Type Definition" })
+					vim.keymap.set('n', '<leader>ss', builtin.lsp_document_symbols, { desc = "LSP | Telescope document Symbols" })
+					vim.keymap.set('n', 'gR', builtin.lsp_references, { desc = "LSP | Telescope go to References" })
+					vim.keymap.set('n', 'gi', builtin.lsp_implementations, { desc = "LSP | Telescope go to Implementations" })
+					vim.keymap.set('n', 'gd', builtin.lsp_definitions, { desc = "LSP | Telescope go to Definition" })
+					vim.keymap.set('n', 'gt', builtin.lsp_type_definitions , { desc = "LSP | Telescope go to Type Definition" })
 				end,
 			})
 		end
