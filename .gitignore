@@ -2,3 +2,6 @@ dotfiles/nvim/lazy-lock.json
 dotfiles/gtk-3.0/bookmarks
 dotfiles/godot/recent_dirs
 dotfiles/qutebrowser/userscripts/__pycache__
+dotfiles/aseprite/Aseprite.log
+dotfiles/aseprite/sessions/
+dotfiles/xfce4/xfconf/
