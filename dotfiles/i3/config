@@ -290,8 +290,7 @@ bindsym $mod+Ctrl+3 workspace $ws3; exec "alacritty -e bash -c '~/.scripts/./ope
 bindsym $mod+Ctrl+4 workspace $ws4; exec godot
 bindsym $mod+Ctrl+5 workspace $ws5; exec blender
 bindsym $mod+Ctrl+6 workspace $ws6; exec krita
-bindsym $mod+Ctrl+7 workspace $ws7; exec obs
-bindsym $mod+Ctrl+8 workspace $ws8; exec discord
+bindsym $mod+Ctrl+7 workspace $ws7; exec obsidian
 
 ## bind program to workspace and focus to them on startup:
 assign [class="zen"] $ws2
@@ -309,9 +308,7 @@ assign [class="steam"] $ws9
 
 # automatic set focus new window if it opens on another workspace than the current:
 # for_window [class=Thunar] focus
-for_window [class=Brave] focus
 for_window [class=Emacs] focus
-
 
 
 ######################################################
@@ -335,33 +332,14 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id ~/.screenlayout/monitor.sh
 
 
-##################
-# floating rules #
-##################
+#########################
+# floating window rules #
+#########################
 
-# set floating (nontiling) for apps needing it
-for_window [class="Yad" instance="yad"] floating enable
-for_window [class="Galculator" instance="galculator"] floating enable
-for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-
-# set floating (nontiling) for special apps
-for_window [class="Xsane" instance="xsane"] floating enable
-for_window [class="Pavucontrol" instance="pavucontrol"] floating enable
-for_window [class="qt5ct" instance="qt5ct"] floating enable
-for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
-for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
-for_window [class="Pamac-manager"] floating enable
-for_window [window_role="About"] floating enable
+for_window [class="pavucontrol"] floating enable #volume control
 
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
-
-# set size of floating window
-#for_window [window_role="(?i)GtkFileChooserDialog"] resize set 640 480 #to set size of file choose dialog
-#for_window [class=".*"] resize set 640 480 #to change size of all floating windows 
-
-# set position of floating window
-#for_window [class=".*"] move position center
 
 ######################################
 # color settings for bar and windows #
