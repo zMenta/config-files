@@ -42,7 +42,7 @@ return {
 			vim.keymap.set('n', '<leader>sh', builtin.command_history, { desc = "Command History" })
 			vim.keymap.set('n', '<leader>sH', builtin.help_tags, { desc = "Help Tags" })
 			vim.keymap.set('n', '<leader>sk', builtin.keymaps, { desc = "Keymaps" })
-			vim.keymap.set('n', '<leader>sb', builtin.current_buffer_fuzzy_find, { desc = "Grep Current Buffer" })
+			vim.keymap.set('n', '<leader>sB', builtin.current_buffer_fuzzy_find, { desc = "Grep Current Buffer" })
 			vim.keymap.set('n', '<leader>sm', builtin.man_pages, { desc = "Man Pages" })
 			vim.keymap.set('n', '<leader>sr', builtin.registers, { desc = "Registers" })
 
