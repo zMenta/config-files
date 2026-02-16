@@ -29,5 +29,12 @@
 			"func _on_${1:callable}() -> void:",
 			"\t${2:pass}"
 		]
+	},
+
+	"Create a tween": {
+		"prefix": "tw",
+		"body": [
+			"var tw: Tween = get_tree().create_tween()"
+		]
 	}
 }
