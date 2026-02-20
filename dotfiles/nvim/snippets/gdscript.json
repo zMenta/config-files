@@ -31,10 +31,17 @@
 		]
 	},
 
+	"Create a timer to await": {
+		"prefix": "tim",
+		"body": [
+			"await get_tree().create_timer(${1:time_seconds}).timeout"
+		]
+	},
+
 	"Create a tween": {
 		"prefix": "tw",
 		"body": [
-			"var tw: Tween = get_tree().create_tween()"
+			"var tw: Tween = create_tween()"
 		]
 	}
 }
