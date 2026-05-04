@@ -337,6 +337,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 #########################
 
 for_window [class="pavucontrol"] floating enable #volume control
+for_window [class="Qalculate-gtk"] floating enable
 
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
