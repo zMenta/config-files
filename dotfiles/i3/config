@@ -298,6 +298,7 @@ assign [class="firefox"] $ws2
 assign [class="qutebrowser"] $ws2
 assign [class="Emacs"] $ws3
 assign [class="Godot"] $ws4
+assign [class="texelizer"] $ws6
 assign [class="Blender"] $ws5
 assign [class="krita"] $ws6
 # Obsidian and Obs studio
@@ -322,7 +323,7 @@ exec_always setxkbmap $keyboard_layout
 exec_always setxkbmap -option caps:escape
 
 # Automatically aranges the tiles of windows
-exec_always autotiling
+# exec_always autotiling
 
 # Statusbar / Polybar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
