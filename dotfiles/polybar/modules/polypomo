@@ -85,9 +85,9 @@ class Timer:
                     [
                         "notify-send",
                         "-t",
-                        "10000",
+                        "0",
                         "-u",
-                        "normal",
+                        "critical",
                         "Pomodoro",
                         "Timer reached zero",
                     ],
