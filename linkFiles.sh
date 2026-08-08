@@ -19,4 +19,4 @@ fi
 
 stow --restow dotfiles -t ~/.config
 stow --restow scripts -t ~/
-stow --restow bashrc -t ~/ --adopt
+stow --restow homedots -t ~/ --adopt

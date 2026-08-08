@@ -1,0 +1,5 @@
+include "%L"
+# When using FCITX5 + US-INTL international keyboard, it changes the combo '+c to be cedilha.
+
+<dead_acute> <c> : "ç" ccedilla
+<dead_acute> <C> : "Ç" Ccedilla
