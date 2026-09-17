@@ -2,6 +2,8 @@
 # Menta configuration #
 #######################
 
+for_window [class="MentAddons"] floating enable
+
 #####################
 # keyboard settings #
 #####################
@@ -234,8 +236,7 @@ bindsym $mod+n exec ~/.scripts/openYazi.sh
 bindsym $mod+Shift+n exec thunar
 
 bindsym Print exec flameshot gui
-# TODO Add copy menu
-# bindsym $mod+v exec copyq menu
+bindsym $mod+v exec copyq toggle
 
 
 #####################################
@@ -342,6 +343,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 for_window [class="pavucontrol"] floating enable #volume control
 for_window [class="Qalculate-gtk"] floating enable
 for_window [class="sxiv"] floating enable, resize set 95 ppt 95 ppt, move position center
+for_window [class="copyq"] floating enable, resize set 60 ppt 60 ppt, move position center
 
 # set border of floating window
 for_window [class="urxvt"] border pixel 1
