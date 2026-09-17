@@ -1,0 +1,26 @@
+#!/bin/sh
+
+case "$1" in
+    "p") 
+        xclip -selection clipboard 
+        ;;
+        
+    "c" | "y") 
+        while read -r filename; do
+            xclip -selection clipboard -target image/png -i "$filename"
+        done
+        ;;
+
+	"d") 
+        # Clear the internal argument list
+        set -- 
+        # Read all marked files and add them to the list safely
+        while read -r filename; do
+            set -- "$@" "$filename"
+        done
+        # If the list is not empty, launch a single dragon window with all files
+        if [ "$#" -gt 0 ]; then
+            dragon-drop -a -x "$@" &
+        fi
+        ;;
+esac
