@@ -1,0 +1,28 @@
+@import "~/.config/rofi/bigicon_grid_preview.rasi"
+
+window {
+    width: 80%;
+	height: 80%;
+}
+
+listview {
+    columns: 1;
+    lines: 4;
+    layout: vertical;
+    spacing: 1px;
+}
+
+element {
+    orientation: horizontal;
+    padding: 1px;
+}
+
+element-icon {
+    size: 48;
+    horizontal-align: 0.5;
+}
+
+element-text {
+    horizontal-align: 0.05;
+    vertical-align: 0.5;
+}

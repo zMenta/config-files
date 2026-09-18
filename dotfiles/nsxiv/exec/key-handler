@@ -1,26 +1,53 @@
 #!/bin/sh
 
 case "$1" in
-    "p") 
+    "p") # Copy image path to clipboard
         xclip -selection clipboard 
         ;;
-        
-    "c" | "y") 
+
+    "c" | "y") # Copy the image to clipboard
         while read -r filename; do
             xclip -selection clipboard -target image/png -i "$filename"
         done
         ;;
 
-	"d") 
-        # Clear the internal argument list
+	"n") # Invokes dragon-drop feature
         set -- 
-        # Read all marked files and add them to the list safely
         while read -r filename; do
             set -- "$@" "$filename"
         done
-        # If the list is not empty, launch a single dragon window with all files
         if [ "$#" -gt 0 ]; then
             dragon-drop -a -x "$@" &
         fi
         ;;
+
+	"d") # deletes the selected files with rofi confirmation
+        set -- 
+        while read -r filename; do
+            set -- "$@" "$filename"
+        done
+
+		## More elegant, but with no img preview support :(
+        # file_list=$(printf -- "- %s\n" "$@")
+        # answer=$(printf "no\nyes" | rofi -dmenu -i -p "Delete $# file(s)?" -mesg "$file_list")
+	
+		# Image preview workaroud
+        answer=$( (
+            printf "NO - Keep files\0icon\x1fdialog-cancel\n"
+            printf "YES - Delete files\0icon\x1fedit-delete\n"
+            
+            for file in "$@"; do
+                abs_path=$(realpath "$file")
+                printf "%s\0icon\x1fthumbnail://%s\n" "$file" "$abs_path"
+            done
+        ) | rofi -dmenu -i -show-icons -p "Delete $# file(s)?" -config ~/.config/rofi/bigicon_grid_preview.rasi)
+
+		if [ "$answer" = "YES - Delete files" ]; then
+			notify-send -u critical "NSXIV" "$# files deleted" --expire-time 4000
+            rm -rf -- "$@"
+		else
+			notify-send -u normal "NSXIV" "Deletion cancelled" --expire-time 4000
+        fi
+
+		;;
 esac
