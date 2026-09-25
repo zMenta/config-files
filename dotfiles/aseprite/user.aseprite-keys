@@ -19,6 +19,9 @@
         </key>
     </commands>
     <tools>
+        <key tool="rectangular_marquee" shortcut="R"/>
+        <key tool="blur" shortcut="R" removed="true"/>
+        <key tool="jumble" shortcut="R" removed="true"/>
         <key tool="text" shortcut="T" removed="true"/>
     </tools>
     <quicktools>
