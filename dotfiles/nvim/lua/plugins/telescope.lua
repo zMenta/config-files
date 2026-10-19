@@ -29,9 +29,23 @@ return {
 			require('telescope').load_extension('fzf')
 			local builtin = require('telescope.builtin')
 
+			-- Custom Picker with ignore list --
+			local function find_files_with_ignore_list()
+				builtin.find_files({
+					file_ignore_patterns = {
+						"%.tscn",
+						"%.gd.uid",
+						"%.tres",
+						"%.import",
+					}
+				})
+			end
+
 			-- File Pickers --
 			vim.keymap.set('n', '<leader><leader>', builtin.git_files, { desc = "Search files in current git project" })
 			vim.keymap.set('n', '<leader>sf', builtin.find_files, { desc = "Files" })
+			vim.keymap.set('n', '<leader>sf', find_files_with_ignore_list, { desc = "Files-Ignore .tscn, .gd.uid, .tres, .import" })
+			vim.keymap.set('n', '<leader>sF', builtin.find_files, { desc = "Files" })
 			vim.keymap.set('n', '<leader>s.', function () vim.cmd([[Telescope find_files find_command=rg,--ignore,--hidden,--files prompt_prefix=🔍]]) end, { desc = "Files +Hidden" })
 			vim.keymap.set('n', '<leader>sg', builtin.live_grep, { desc = "Files with Grep" })
 
