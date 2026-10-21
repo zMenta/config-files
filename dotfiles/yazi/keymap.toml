@@ -2,3 +2,8 @@
 on  = "<C-n>"
 run = "shell -- dragon-drop -a -x -T %s"
 desc = "Drag and drop selected files"
+
+[[mgr.prepend_keymap]]
+on  = "<C-i>"
+run = "shell -- nsxiv -r %s"
+desc = "Open images with nsxiv for the selected files"
