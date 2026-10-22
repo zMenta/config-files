@@ -9,9 +9,8 @@ return {
 				enabled = true
 			},
 			heading = {
-				width = 'block',
-				left_pad = 0,
-				right_pad = 2,
+				-- disables header background color
+				backgrounds = {},
 			},
 		},
 	}
