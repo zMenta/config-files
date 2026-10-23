@@ -1,9 +1,9 @@
---------------------------------------------------------------------
---                         Keybinds                               --
---------------------------------------------------------------------
+---------------------------------------------------------------------
+--                         Keybinds                                --
+---------------------------------------------------------------------
 -- Please refer to each plugin config for their specific keybinds, --
--- this section is meant for "vanilla" keybinds.                  --
---------------------------------------------------------------------
+-- this section is meant for "vanilla" keybinds.                   --
+---------------------------------------------------------------------
 
 -- Note --
 -- `desc` are descriptions of the keybind. Whichkey read this value.
@@ -17,9 +17,9 @@ vim.keymap.set("i", "<C-l>", "<nop>") -- Removing to not conflict with code comp
 vim.keymap.set("i", "<C-h>", "<nop>") -- Removing to not conflict with code completion keymaps
 
 -- Diagnostics
-vim.keymap.set('n', '<space>x', vim.diagnostic.open_float, { desc = "Open diagnostics"})
-vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Previous diagnostics"})
-vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Next diagnostics"})
+vim.keymap.set('n', '<space>x', vim.diagnostic.open_float, { desc = "Open diagnostics" })
+vim.keymap.set('n', ']d', function () vim.diagnostic.jump({count=1, float=true}) end, { desc = "Next diagnostics" })
+vim.keymap.set('n', '[d', function () vim.diagnostic.jump({count=-1, float=true}) end, { desc = "Previous diagnostics" })
 
 -- In terminal mode goes back to normal mode by pressing <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
@@ -41,7 +41,7 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("x", "<C-p>", [["_dP]])
 
 -- Yank to your computer clipboard, not just inside neovim.
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank to system clipboard"})
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]], { desc = "Yank to system clipboard" })
 -- vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 -- Substitute all words on selected by the cursor.
@@ -59,9 +59,11 @@ vim.keymap.set("n", "<leader>wS", vim.cmd.new, { desc = "New Empty Split Window"
 --- Resizing
 vim.keymap.set("n", "<leader>wI", "<c-w>15>", { desc = "Increase Window Width Size" })
 vim.keymap.set("n", "<leader>wD", "<c-w>15<", { desc = "Increase Window Width Size" })
-vim.keymap.set("n", "<leader>wi", "<c-w>10+", { desc = "Increase Window Height Size" } )
+vim.keymap.set("n", "<leader>wi", "<c-w>10+", { desc = "Increase Window Height Size" })
 vim.keymap.set("n", "<leader>wd", "<c-w>10-", { desc = "Decrease Window Height Size" })
 vim.keymap.set("n", "<leader>w=", "<c-w>=", { desc = "Normalize Windows Sizes" })
+vim.keymap.set("n", "<leader>wF", "<c-w>_", { desc = "Maximize window Height" })
+vim.keymap.set("n", "<leader>wf", "<c-w>|", { desc = "Maximize window Width" })
 --- Cursor movement
 vim.keymap.set("n", "<leader>wl", "<c-w>l", { desc = "Move to the right window" })
 vim.keymap.set("n", "<leader>wh", "<c-w>h", { desc = "Move to the left window" })
@@ -72,17 +74,19 @@ vim.keymap.set("n", "<leader>wL", "<c-w>L", { desc = "Move window to the right w
 vim.keymap.set("n", "<leader>wH", "<c-w>H", { desc = "Move window to the left window" })
 vim.keymap.set("n", "<leader>wJ", "<c-w>J", { desc = "Move window to the bottom window" })
 vim.keymap.set("n", "<leader>wK", "<c-w>K", { desc = "Move window to the upper window" })
+-- Tabs
+vim.keymap.set("n", "<leader>wtn", function() vim.cmd([[tabnext]]) end, { desc = "Cycle to the next tab" })
+vim.keymap.set("n", "<leader>wtp", function() vim.cmd([[tabpreviou]]) end, { desc = "Cycle to the previous tab" })
+vim.keymap.set("n", "<leader>wtc", function() vim.cmd([[tabclose]]) end, { desc = "Closes the current tab" })
+vim.keymap.set("n", "<leader>wtN", function() vim.cmd([[tabnew]]) end, { desc = "Create a new tab" })
+vim.keymap.set("n", "<leader>wT", '<c-w>T', { desc = "Break out into a new Tab" })
 
 -- Toggles
 vim.keymap.set("n", "<leader>ts", function() vim.cmd([[set spell!]]) end, { desc = "Toggle spell check" })
 vim.keymap.set("n", "<leader>tw", function() vim.cmd([[set wrap!]]) end, { desc = "Toggle line wrap" })
-vim.keymap.set("n", "<leader>tr", function() vim.cmd([[retab]]) end, { desc = "Retab current buffer" })
 
--- Tabs 
-vim.keymap.set("n", "<leader>Tn", function() vim.cmd([[tabnext]]) end, { desc = "Cycle to the next tab" })
-vim.keymap.set("n", "<leader>Tp", function() vim.cmd([[tabpreviou]]) end, { desc = "Cycle to the previous tab" })
-vim.keymap.set("n", "<leader>Tc", function() vim.cmd([[tabclose]]) end, { desc = "Closes the current tab" })
-vim.keymap.set("n", "<leader>TN", function() vim.cmd([[tabnew]]) end, { desc = "Create a new tab" })
+-- "Run", command shortcuts
+vim.keymap.set("n", "<leader>rr", function() vim.cmd([[retab!]]) end, { desc = "Retab current buffer: `retab!`" })
 
 -- folds
 -- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all

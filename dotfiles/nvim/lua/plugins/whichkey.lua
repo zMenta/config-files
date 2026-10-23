@@ -21,15 +21,16 @@ return {
 			wk.add({
 				-- Groups Mappings
 				{ "<leader>w", group = "Window" },
+				{ "<leader>wt", group = "Tab" },
 				{ "<leader>t", group = "Toggle" },
 				{ "<leader>h", group = "Harpoon" },
 				{ "<leader>g", group = "Git" },
+				{ "<leader>gh", group = "Hunk" },
 				{ "<leader>s", group = "Search" },
 				{ "<leader>d", group = "Dap" },
 				{ "<leader>c", group = "Code" },
-				{ "<leader>gh", group = "Hunk" },
-				{ "<leader>T", group = "Tab" },
-		})
-	end
-}
+				{ "<leader>r", group = "Run" },
+			})
+		end
+	}
 }
