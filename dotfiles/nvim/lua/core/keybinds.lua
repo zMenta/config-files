@@ -6,7 +6,7 @@
 ---------------------------------------------------------------------
 
 -- Note --
--- `desc` are descriptions of the keybind. Whichkey read this value.
+-- `desc` are descriptions of the keybind. Whichkey plugin read this value.
 
 -- Sets the leader key to space
 vim.g.mapleader = " "
@@ -24,10 +24,6 @@ vim.keymap.set('n', '[d', function () vim.diagnostic.jump({count=-1, float=true}
 -- In terminal mode goes back to normal mode by pressing <ESC>
 vim.keymap.set("t", "<ESC>", "<C-\\><C-n>")
 
--- Let you move the selected area up or down.
--- vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
--- vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
-
 -- While moving with C-d and C-u (down or up), keeps the cursor centered.
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -35,7 +31,6 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 -- When moving the cursor with searcher, keep the cursor centered.
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 
 -- Pastes the yank clipboard deleting the visual mode selection region without overwriting your clipboard.
 vim.keymap.set("x", "<C-p>", [["_dP]])
@@ -87,6 +82,10 @@ vim.keymap.set("n", "<leader>tw", function() vim.cmd([[set wrap!]]) end, { desc 
 
 -- "Run", command shortcuts
 vim.keymap.set("n", "<leader>rr", function() vim.cmd([[retab!]]) end, { desc = "Retab current buffer: `retab!`" })
+
+-- Quickfix list
+vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>", { desc = "Move to the next quickfix item: `cnext`" })
+vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>", { desc = "Move to the previous quickfix item: `cprev`" })
 
 -- folds
 -- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all
