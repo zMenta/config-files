@@ -86,6 +86,9 @@ vim.keymap.set("n", "<leader>rr", function() vim.cmd([[retab!]]) end, { desc = "
 -- Quickfix list
 vim.keymap.set("n", "<C-j>", "<cmd>cnext<CR>", { desc = "Move to the next quickfix item: `cnext`" })
 vim.keymap.set("n", "<C-k>", "<cmd>cprev<CR>", { desc = "Move to the previous quickfix item: `cprev`" })
+vim.keymap.set("n", "<leader>oo", "<cmd>copen<CR>", { desc = "Open quickfix list" })
+vim.keymap.set("n", "<leader>oc", "<cmd>cclose<CR>", { desc = "Closes quickfix list" })
+vim.keymap.set("n", "<leader>os", [[:cdo s/\<<C-r><C-w>\>/<C-r><C-w>/gIc<Left><Left><Left><Left>]], { desc = "Quickfix Do `cdo`, substitute all words under cursor"})
 
 -- folds
 -- vim.keymap.set("n", "zm", "zM", {desc = "Close all folds"}) -- Fold all

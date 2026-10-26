@@ -30,6 +30,7 @@ return {
 				{ "<leader>d", group = "Dap" },
 				{ "<leader>c", group = "Code" },
 				{ "<leader>r", group = "Run" },
+				{ "<leader>o", group = "Quickfix list" },
 			})
 		end
 	}
