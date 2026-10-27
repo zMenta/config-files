@@ -1,0 +1,9 @@
+[opener]
+zathura = [
+  { run = "zathura %s", block = false }
+]
+
+[open]
+prepend_rules = [
+	{ url = "*.cbz", use = "zathura" },
+]
