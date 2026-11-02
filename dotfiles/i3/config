@@ -303,6 +303,7 @@ assign [class="Emacs"] $ws3
 assign [class="Godot"] $ws4
 assign [class="texelizer"] $ws6
 assign [class="Blender"] $ws5
+assign [class="blockbench"] $ws5
 assign [class="krita"] $ws6
 # Obsidian and Obs studio
 assign [class="obs"] $ws7
